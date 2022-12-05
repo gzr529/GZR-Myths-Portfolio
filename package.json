@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "start": "parcel",
+        "build": "parcel build src/index.html",
+        "s": "npx parcel src/index.html",
+        "build-prod": "npx -p parcel-bundler parcel build src/index.html --no-optimize"
+    },
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.8.0",
+        "parcel": "^2.8.0"
+    }
+}
