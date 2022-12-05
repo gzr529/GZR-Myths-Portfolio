@@ -40,10 +40,11 @@
 
 .splashImage {
   width: 100vw;
-  height: 100vh;
-  background-image: url("https://i.imgur.com/eYPgI4m.png");
+  height: 95vh;
+  background-image: url("https://imgur.com/ufsrP8P.png");
   background-position: center;
   background-size: cover;
+  transition: all 1s ease-in-out;
   position: relative;
 }
 
@@ -56,7 +57,7 @@
 
 .selectionWrapper {
   height: 10rem;
-  width: 70vw;
+  width: 100vw;
   background-color: #000;
   flex-direction: row;
   justify-content: space-evenly;
@@ -84,8 +85,10 @@
 }
 
 .cardIcon {
+  color: #faebd7;
   margin-top: 3rem;
   font-size: 5rem;
+  transition: all .3s ease-in-out;
 }
 
 .cardText {
@@ -93,28 +96,24 @@
   font-size: 1.3rem;
 }
 
+.cardButton {
+  background-color: #f0f8ff00;
+  border: none;
+}
+
+.cardIcon:hover {
+  color: #4e4a4a;
+}
+
 .selectionCard:hover {
   transform: translateY(-9rem);
-}
-
-.bodySection {
-  height: 100%;
-  z-index: 50;
-  box-sizing: border-box;
-  background-color: #1b1b1b;
-  margin: 0;
-  padding: 10rem 0 0;
-  position: relative;
-}
-
-.testText {
-  margin: 0;
 }
 
 .signatureContainer {
   width: 100vw;
   justify-content: center;
   padding-bottom: 2rem;
+  transition: all 2s ease-in-out;
   display: flex;
 }
 
@@ -188,6 +187,88 @@
 
 .icon:hover {
   background-color: #9f51cc;
+}
+
+.bodySection {
+  width: 100vw;
+  z-index: 50;
+  box-sizing: border-box;
+  background-color: #1b1b1b;
+  justify-content: center;
+  margin: 0;
+  padding: 10rem 0 0;
+  display: flex;
+  position: relative;
+}
+
+.aboutMe {
+  width: 85vw;
+  background-color: #302d2d;
+  border-color: #892ac0;
+  border-top-style: solid;
+  border-top-width: .3rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  transition: all 1s ease-in-out;
+  display: flex;
+}
+
+.aboutTitle {
+  color: #fff;
+  font-family: Alexandria, sans-serif;
+  font-style: bold;
+  align-items: center;
+  margin-bottom: -.7rem;
+  font-size: 3rem;
+  text-decoration: none;
+  display: flex;
+}
+
+.aboutText {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.aboutImg {
+  width: 15rem;
+  height: 15rem;
+  display: none;
+}
+
+.aboutLeftCol {
+  flex-direction: column;
+  display: flex;
+}
+
+.aboutRightCol {
+  height: 100%;
+  flex-direction: column;
+  flex-grow: 2;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.bodyVideoWrapper {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.bodyVideo {
+  width: 84.5vw;
+  height: 95vh;
+  aspect-ratio: 16, 9;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2rem;
+}
+
+.fa-link {
+  padding-left: 1rem;
+  font-size: 1.5rem;
 }
 
 body {

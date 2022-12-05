@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/b97900a89e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
     <nav class="headerBar">
         <i class="fa-solid fa-star-and-crescent navIcon"></i>
         <!-- <img class="headerLogo" alt="Image of Main Logo"src="https://images.unsplash.com/photo-1670161599938-3c143c778231?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=398&q=80"> -->
@@ -22,38 +22,51 @@
     <div class="splashWrapper">
         <div class="splashBack">
         </div>
-        <div class="splashImage">
+        <div class="splashImage" id="splashImage">
         </div>
     </div>
 
     <div class="selectionOuter">
-        <div class="selectionWrapper">
+        <div class="selectionWrapper" data-aos="fade-up">
             <div class="selectionCard">
                 <p class="cardText">Blogs</p>
-                <i class="fa-brands fa-blogger cardIcon"></i>
+                <button class="cardButton" id="blogButton"><i class="fa-brands fa-blogger cardIcon"></i></button>
             </div>
             <div class="selectionCard">
                 <p class="cardText">Essays</p>
-                <i class="fa-solid fa-newspaper cardIcon"></i>
+                <button class="cardButton" id="essayButton"><i class="fa-solid fa-newspaper cardIcon"></i></button>
             </div>
             <div class="selectionCard">
                 <p class="cardText">Projects</p>
-                <i class="fa-solid fa-diagram-project cardIcon"></i>
+                <button class="cardButton" id="projButton"><i class="fa-solid fa-diagram-project cardIcon"></i></button>
             </div>
             <div class="selectionCard">
                 <p class="cardText">Presentations</p>
-                <i class="fa-sharp fa-solid fa-person-chalkboard cardIcon"></i>
+                <button class="cardButton" id="presButton"><i class="fa-sharp fa-solid fa-person-chalkboard cardIcon"></i></button>
+            </div>
+            <div class="selectionCard">
+                <p class="cardText">Reflections</p>
+                <button class="cardButton" id="reflButton"></button><i class="fa-regular fa-id-badge cardIcon"></i></button>
             </div>
         </div>
     </div>
+
     <div class="bodySection">
-    <p class="testText"></p>
+        <div class="aboutMe" id="bodySection">
+            <div class="aboutLeftCol">
+                <a class="aboutTitle" id="aboutTitle" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjZsMKvp-L7AhW0kYkEHfAxCg0QFnoECBAQAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHighway_of_Death&usg=AOvVaw2tto4vKQQS-0LvLi_rkPKE">About Me</a>
+                <p class="aboutText" id="aboutText">Hey! My name is Guseyn Zarbaliyev! I’m a Senior currently studying at Staten Island Technical High School. As you can see, I have a passion for Web Development and Computer Science. With college looming ever so closer, I hope to major in some field of engineering or computer science, whether it be Cybersecurity or Electrical Engineering. My favorite genres of music are Garage Rock and Rap, with my favorite artists being the Eagles of Death Metal and Kendrick Lamar. In my spare time, I like to work out and spend time with friends, doing literally anything. Wether it is thrifting in the city or just playing games, I enjoy any time I spend with them. I am also from the country of Azerbaijan and speak Azeri nearly perfectly (aside from my horrendous accent).</p>
+            </div>
+            <div class="aboutRightCol">
+                <img class="aboutImg" alt="Picture of Code" id ="aboutImageOne" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FCategory%3AFully_transparent_images&psig=AOvVaw0UrM4seXqB125-G6QiCnaI&ust=1670323732045000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNiZsfem4vsCFQAAAAAdAAAAABAE">
+            </div>
+        </div>
     </div>
 
     <div class="signatureContainer" data-aos="fade-right">
         <div class="signatureWrapper">
             <div class="signatureLeftSide">
-                <img class="signatureImage" src="https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai">
+                <img class="signatureImage" alt="Picture of (Yours Truely) Guseyn Zarbaliyev" src="https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai">
                 <div class="iconContainer">
                     <i class="fa-brands fa-twitter icon"></i>
                     <i class="fa-solid fa-envelope icon"></i>
@@ -61,18 +74,18 @@
                     <i class="fa-brands fa-github icon"></i>
                 </div>
             </div>
-            <div class="signatureRightSide"">
+            <div class="signatureRightSide">
                 <div class="signatureText">
-                    <li class="signatureName">Guseyn Zarbaliyev</li>
-                    <li class="signatureTitle">Student</li>
-                    <img class="signatureSignature" src="https://i.imgur.com/yTu8OrN.png">
-                    <li class="signatureTopWord">gzarbaliyev@gmail.com</li>
-                    <li>347-697-8484</li>
-                    <li>NYDKC.org</li>
+                    <span class="signatureName">Guseyn Zarbaliyev</span>
+                    <span class="signatureTitle">Student</span>
+                    <img class="signatureSignature" alt="Picture of my Signature" src="https://i.imgur.com/yTu8OrN.png">
+                    <span class="signatureTopWord">gzarbaliyev@gmail.com</span>
+                    <span>347-697-8484</span>
+                    <span>NYDKC.org</span>
                 </div>
             </div>
         </div>
     </div>
-        
+
 </body>
 </html>

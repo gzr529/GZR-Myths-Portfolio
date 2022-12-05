@@ -1,0 +1,80 @@
+.bodySection{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    background-color:   rgb(27, 27, 27);
+    position: relative;
+    z-index: 50;
+    padding: 0;
+    padding-top: 10rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.aboutMe{
+    display: flex;
+    background-color: rgb(48, 45, 45);
+    width: 85vw;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-top: 0.3rem solid;
+    border-color: rgb(137, 42, 192);
+    transition: 1s ease-in-out;
+}
+
+.aboutTitle{
+    display: flex;
+    color:white;
+    font-family: 'Alexandria', sans-serif;
+    font-style: bold;
+    font-size: 3rem;
+    margin-bottom: -0.7rem;
+    text-decoration: none;
+    align-items: center;
+}
+
+.aboutText{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.aboutImg{
+    width: 15rem;
+    height: 15rem;
+    display: none;
+}
+.aboutLeftCol{
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutRightCol{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.bodyVideoWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bodyVideo{
+    width: 84.5vw;
+    height: 95vh;
+    aspect-ratio: 16,9;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
+    border: none;
+}
+
+.fa-link{
+    padding-left: 1rem;
+    font-size: 1.5rem;
+}
