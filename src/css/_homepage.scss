@@ -1,0 +1,109 @@
+.splashImage{
+    width: 100vw;
+    height: 100vh; 
+    background-image: url("https://i.imgur.com/eYPgI4m.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+// .splashBack{
+//     width: 100vw;
+//     height: 100vh; 
+//     background-image: url("https://i.imgur.com/eYPgI4m.png");
+//     background-position: center;
+//     background-size: cover;
+//     filter: blur(10px);
+//     position: relative;
+// }
+
+// .splashWrapper{
+//     display: flex;
+// }
+
+.selectionOuter{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+}
+
+.selectionWrapper{
+    display: flex;
+    position: relative;
+    height: 10rem;
+    width: 70vw;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: row;
+    background-color: black;
+}
+
+.selectionCard{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.664);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 15vw;
+    height: 15rem;
+    z-index: 49;
+    align-items: center;
+    transition: all 1.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: all 1.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: all 1.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 1.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: all 1.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-radius: 1.3rem;   
+    font-family: 'Alexandria', sans-serif; 
+    color: antiquewhite;
+}
+
+.cardIcon{
+    margin-top: 3rem;
+    font-size: 5rem;
+}
+
+.cardText{
+    font-size: 1.3rem;
+    padding-top: 0.8rem;
+}
+
+.selectionCard:hover{   
+    transform: translateY(-9rem);
+}
+
+
+// .selectionCard:hover{   
+//     animation: rise 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1 normal forwards;
+//     transition: ease-in-out;
+// }
+
+// @keyframes rise {
+//   50%{
+//     transform: translateY(-11rem);
+//     z-index: 49;
+//   }
+//   70%{
+//     z-index: 53;
+//   }
+//   100%{
+//     transform: translateY(0rem);
+//     z-index: 53;
+//   }
+// }
+
+.bodySection{
+    height: 100%;
+    background-color:   rgb(27, 27, 27);
+    position: relative;
+    z-index: 50;
+    padding: 0;
+    padding-top: 10rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.testText{
+    margin: 0;
+}

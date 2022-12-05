@@ -1,3 +1,21 @@
-body{
-    background-color: rgb(207, 159, 207)
+@import "navbar.scss";
+@import "homepage.scss";
+@import "footer.scss";
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;400&family=Major+Mono+Display&family=Montserrat:wght@400;500&display=swap');
+
+body {
+    background-color:   rgb(27, 27, 27);
+    margin: 0px;
+    width: 100vw;
+    font-size: 1rem;
+    scroll-behavior: smooth;
+    font-family: 'Alexandria', sans-serif;
+    font-family: 'Major Mono Display', monospace;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.html {
+    margin: 0px;
+    padding: 0rem;
 }

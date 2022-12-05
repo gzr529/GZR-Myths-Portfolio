@@ -1,0 +1,79 @@
+.signatureContainer{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-bottom: 2rem;
+}
+
+.signatureWrapper{
+    display: flex;
+}
+
+.signatureLeftSide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0.3rem;
+}
+
+.signatureImage{
+    width: 10rem;
+    border-radius: 100rem;
+    margin-bottom: 0.7rem;
+}
+
+.signatureText{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-evenly;
+    border-left: solid rgb(255, 255, 255) 0.2rem;
+    padding-left: 0.7rem;
+    padding-right: 1vw;
+    color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+.signatureName{
+    font-size: 2rem;
+    font-style: bold;
+}
+
+.signatureTitle{
+    padding-top: 0;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.signatureTopWord{
+    padding-top: 2rem;
+}
+
+.signatureSignature{
+    width: 5rem;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+}
+.iconContainer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0, 255, 255, 0);
+
+}
+
+.icon{
+    color: rgb(255, 255, 255);
+    background-color: rgba(159, 81, 204, 0.274);
+    padding: 0.4rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.icon:hover{
+    background-color: rgb(159, 81, 204);
+
+}
