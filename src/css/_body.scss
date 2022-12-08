@@ -9,7 +9,12 @@
     padding-top: 2rem;
     margin: 0;
     align-items: center;
+    min-height: 10vh;
     transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out; /* Firefox 4 */
+    -webkit-transition: 1s ease-in-out; /* Safari and Chrome */
+    -o-transition: 1s ease-in-out; /* Opera */
+    -ms-transition: 1s ease-in-out; /* Explorer 10 */
 }
 
 .aboutMe{
@@ -21,6 +26,14 @@
     border-top: 0.3rem solid;
     border-color: rgb(137, 42, 192);
     transition: 1s ease-in-out;
+    text-overflow: ellipsis;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+     scrollbar-width: none;  /* Firefox */
+}
+
+.aboutMe::-webkit-scrollbar {
+  display: none;
 }
 
 .aboutTitle{
@@ -33,6 +46,7 @@
     padding-top: 1rem;
     text-decoration: none;
     align-items: center;
+    width: 85vw;
 }
 
 .aboutTitleText{

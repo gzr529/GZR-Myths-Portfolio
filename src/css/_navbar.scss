@@ -40,11 +40,14 @@
    display: flex;
    position: absolute;
    justify-content: flex-end;
+   padding: auto;
 }
 .resizeButton{
    color: white;
    transition: 0.15s ease-in-out;
    padding-left: 1rem;
+   background-color: rgba(39, 37, 37, 0.685);
+   padding: 1rem;
 }
 
 .resizeButton:hover{

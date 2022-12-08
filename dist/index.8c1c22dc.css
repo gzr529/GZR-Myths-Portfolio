@@ -41,13 +41,15 @@
 .aboutControls {
   width: 85vw;
   justify-content: flex-end;
+  padding: auto;
   display: flex;
   position: absolute;
 }
 
 .resizeButton {
   color: #fff;
-  padding-left: 1rem;
+  background-color: #272525af;
+  padding: 1rem;
   transition: all .15s ease-in-out;
 }
 
@@ -271,6 +273,8 @@
 .bodySection {
   width: 100vw;
   z-index: 50;
+  min-height: 10vh;
+  -o-transition: 1s ease-in-out;
   background-color: #1b1b1b;
   flex-direction: column;
   align-items: center;
@@ -283,6 +287,9 @@
 
 .aboutMe {
   width: 85vw;
+  text-overflow: ellipsis;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   background-color: #302d2d;
   border-color: #892ac0;
   border-top-style: solid;
@@ -291,12 +298,18 @@
   padding: 1rem;
   transition: all 1s ease-in-out;
   display: flex;
+  overflow-y: scroll;
+}
+
+.aboutMe::-webkit-scrollbar {
+  display: none;
 }
 
 .aboutTitle {
   color: #fff;
   font-family: Alexandria, sans-serif;
   font-style: bold;
+  width: 85vw;
   align-items: center;
   margin-bottom: -.7rem;
   padding-top: 1rem;
@@ -409,6 +422,14 @@ body {
 .html {
   margin: 0;
   padding: 0;
+}
+
+.off {
+  display: none;
+}
+
+.on {
+  display: flex;
 }
 
 body[data-aos-duration="50"] [data-aos], [data-aos][data-aos][data-aos-duration="50"] {
