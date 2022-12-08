@@ -29,7 +29,6 @@
     justify-content: space-evenly;
     align-items: flex-end;
     flex-direction: row;
-    background-color: black;
 }
 
 .selectionCard{
@@ -79,17 +78,13 @@
 
 @media (max-width:414px){
 .selectionOuter{
-    background-color: aqua;
     justify-content: end;
     height: auto;
-}
-.selectionCard{
-    display: flex;
-    width: 40vw;
-    margin: 0;
+    background-color: rgba(17, 219, 219, 0);
+    position: relative;
     padding: 0;
-    height: auto;
-    margin: 0.3rem;
+    margin: 0;
+    z-index: -10;
 }
 
 .selectionWrapper{
@@ -100,9 +95,20 @@
     background-color: rgb(27, 27, 27);
     padding: 0;
     margin: 0;
-    z-index: 9999;
-    position: relative;
+    height: auto;
+    background-color: rgba(241, 80, 17, 0);
+    z-index: -10;
 }
+
+.selectionCard{
+    display: flex;
+    width: 60vw;
+    height: auto;
+    padding: 0;
+    margin: 0.3rem;
+    z-index: -10;
+}
+
 .selectionCard:hover{
     transform: translateY(0rem); 
 }
@@ -113,7 +119,7 @@
 
 .cardIcon{
     font-size: 3rem;
-    color: antiquewhite;
+    color: rgba(250, 235, 215, 0);
     transition: 0.3s ease-in-out;
     margin: 0;
     margin-bottom: 1rem;

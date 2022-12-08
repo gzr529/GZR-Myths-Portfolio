@@ -540,11 +540,41 @@ const body = document.getElementById("aboutText");
 const splashImg = document.getElementById("splashImage");
 const imgOne = document.getElementById("aboutImageOne");
 const container = document.getElementById("bodySection");
+const bodySection = document.getElementById("bodyContainer");
+let currentValue = 0;
+function addValue() {
+    currentValue += 1;
+    console.log(currentValue);
+}
+function resetValue() {
+    currentValue = 0;
+}
+function infoBox(title, text) {
+    bodySection.insertAdjacentHTML("beforeend", `
+        <div class="aboutMe" id="bodySection${currentValue}">
+        <div class="aboutLeftCol">
+            <div class="aboutControls">
+            <i class="fa-solid fa-window-minimize resizeButton minimizeButton" id="minList${currentValue}" title="Minimize"></i>
+            <i class="fa-solid fa-expand resizeButton maximizeButton" id="maxList${currentValue}" title="Maximize"></i>
+            </div>
+            <a class="aboutTitle" id="aboutTitle" href=""><p class="aboutTitleText">${title}</p></a>
+            <p class="aboutText" id="aboutText${currentValue}">${text}</p>
+        </div>
+        <div class="aboutRightCol">
+            <img class="aboutImg" alt="Picture of Code" id ="aboutImageOne" src="https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai">
+        </div>
+        </div>
+    `);
+    addValue();
+    document.getElementById("bodySection" + (currentValue - 1)).style.height = "5rem";
+    document.getElementById("aboutText" + (currentValue - 1)).style.color = "rgba(250, 235, 215, 0)";
+}
+infoBox(`Hello`, `This is text`);
 document.getElementById("essayButton").addEventListener("click", function essayButton() {
     container.style.opacity = "0";
     essayButton.disabled = true;
     setTimeout(()=>{
-        title.innerHTML = `No Village for Prideful Men (Fairy Tale Writing Piece)<i class="fa-solid fa-link"></i>`;
+        title.innerHTML = `<p class="aboutTitleText">No Village for Prideful Men (Fairy Tale Writing Piece)<span><i class="fa-solid fa-link"></i></span>`;
         body.innerHTML = `<p style="margin-top:0">&nbsp; &nbsp;&nbsp;Millennia ago, in the heart of the Shanolian Plains, lay a small, nameless village. The village was a beacon of prosperity and hope within humanity. Every villager was an extremely extraordinary individual. Whether they be master artisans or legendary archers, the village supported the skills of the villagers, allowing them to hone their talents. The people lived peacefully and avoided the outside world, rarely interacting with others, and only doing so purely to trade for goods. Settlers seeking asylum often faced almost no chance of living within the village, except for a handful of prodigies. But life inside the walls was unmatched, and many still desired to liven with its walls. Children were never exposed to acts of violence or brutality, with essentially no knowledge of the distinction between good and evil. They all lived with total trust for one another. The village provided for whatever the people needed at no cost. All were free to practice any religion they wished to do so and were allowed to speak and preach with no bounds. It was even rumored that the people of the village had been enlightened with the secret of true happiness. Their peace was almost&hellip; uncanny to anyone that caught a glimpse of life within the village. But alas, nothing can last forever. Decades ago, the village had the unfortunate luck of being at the forefront of a war campaign led by a decrepit wizard tyrant only known as&nbsp;&lsquo;Seytan&rsquo;.&nbsp;The village had offered no resistance and had been brought to its knees through the use of Seytan&rsquo;s personal army of mercenaries and the overwhelming prowess of the dark arts. Millennia of pure human enlightenment had been interrupted by a single man. Most believed that his actions were borderline inhuman. Seytan acting off what seemed like a lust guided by pure sadism. He sabotaged food supplies and created blockades to cause manufactured famines forcing the villagers to eat whatever they could manage to get a hold of,&nbsp;by any means necessary.&nbsp;Indiscriminate killings were ordered on a whim, leading to paranoia among the villagers. He separated children from their parents only to then sell them off into slavery, and use the profit to further cement his rule over the village. For his amusement, he used biological warfare to fabricate the spread of disease, leading to multiple epidemics. Escape was also made utterly impossible. Mercenaries gathered all weapons to prevent any possibility of a coup, despite the already lackluster militia that the village supported, and a total-barrier spell was cast, preventing anyone from leaving the village, and essentially forcing every soul under his rule. This nameless village had truly become a repulsive sight to behold. The epitome of human despair. Seytan was in every aspect of the word, a tyrant. However, within all his malice, lay a disturbingly warped sense of pride. Seytan felt as though he was a harbinger of fortune and peace. He saw it that he was allowing the villagers to taste the true capability of humanity, and embracing them with a foreign &lsquo;culture&rsquo;. His pride was so unbounded, that he believed that as long as he lived, his authority would not falter. In his delusion, he challenged any of the villagers with an opportunity to take his crown. He presented three challenges. A game of wit, a game of power, and a game of luck. &nbsp;If anyone managed to usurp him, he swore to lift the spell that imprisoned the villagers and allow them to end his occupancy over the land. But no one ever dared to challenge Seytan through the years of fear-mongering and social conditioning. Every soul in the village dread what Seytan might do to them if they failed his challenges. There truly seemed to be nothing left to do.</p>
 <p>&nbsp;&nbsp;&nbsp;In the wake of Seytan&rsquo;s rule, the people of this unnamed village began to revert to barbaric instinct, lacking empathy and morals. A once-enlightened society full of humanity&apos;s greatest individuals had become a collection of deplorable savages, overcome with overwhelming despair. There were instances of mothers that killed their own children for fear that they had stolen their ration of food. Once unwavering friendships with iron-clad bonds had shattered turning most into bitter rivals. People committed unnameable atrocities towards each other, things I cannot bear to name. After years, most had given up the idea of a better life, with only a handful clinging to the idea that they could free themselves from Seytan. These rare few were the strongest that continued to be filled with hope. For whatever reason that drives them, whether it be religion, family, or the promise of peace, hope remained the one thing that kept this handful of villagers sane. Rhan was one of these bold few. His parents were one of the first victims of one of Seytan&rsquo;s massacres leaving the boy alone to fend for himself. He was often left starving for days on end and in one instance had almost been murdered by cannibals. Even before Seytan&rsquo;s rule, Rhan was ordinary, seeming to be extremely average in every aspect. Yet, despite his current circumstances and history, he strangely&nbsp;still&nbsp;hung onto hope. He trudged forward no matter what, full of determination to preserve. However, the boy was still human. Rhan had become overwhelmed with malice. Malice targeted at Seytan. He still couldn&apos;t comprehend what he was enduring, that one man in the high chair was the reason for so much suffering. One. Single. Man. He had made it his life goal to take down Seytan. Rhan had no real skill nor talent unlike many of his people but was nevertheless determined to challenge Seytan one day, at any cost. For the sake of his parents and his people. For revenge.&nbsp;</p>
 <p>He knew that he needed liked minded people to achieve his goal. Over time, he had found a group of survivors just like himself, those who clung to hope. They all attempted to preserve life before their occupation, secretly supporting each other, a sort of small rebellion against Seytan, a tiny pocket preserving their previous culture. The group of survivors seemed the one place where laughter and trust could be found in the entire village. They had formed a small hideout in the corner of the village, nearly out of sight from Seytan&rsquo;s roaming army. Eventually, Rhan began to get accustomed to the life he was creating. He had found comrades that shared his goal. The hope within him only grew.</p>
@@ -567,7 +597,7 @@ document.getElementById("projButton").addEventListener("click", function projBut
     container.style.opacity = "0";
     projButton.disabled = true;
     setTimeout(()=>{
-        title.innerHTML = "Hey! Still A Work in Progress!";
+        title.innerHTML = `<p class="aboutTitleText">Hey! Still A Work in Progress!</p>`;
         body.innerHTML = `ლ(ಠ_ಠლ)`;
         imgOne.remove();
         title.href = "https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi";
@@ -583,7 +613,7 @@ document.getElementById("presButton").addEventListener("click", function presBut
     container.style.opacity = "0";
     presButton.disabled = true;
     setTimeout(()=>{
-        title.innerHTML = "Celtic Mythology Presentation";
+        title.innerHTML = `<p class="aboutTitleText">Celtic Mythology Presentation</p>`;
         body.innerHTML = `<div class="bodyVideoWrapper"><iframe class="bodyVideo" src="https://www.youtube.com/embed/RhtoTgRwoEA"></iframe><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vREk9uheugytWonYUcAKtyiXLOWZ5ZsVwu_-NIXBpqmWyw3WYB23qTDAyYgt-ICUDc4SNxPZI1e13W9/embed?start=false&loop=false&delayms=5000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
 </iframe></div>`;
         imgOne.remove();
@@ -601,7 +631,7 @@ document.getElementById("blogButton").addEventListener("click", function blogBut
     container.style.opacity = "0";
     blogButton.disabled = true;
     setTimeout(()=>{
-        title.innerHTML = "Hey! Still A Work in Progress!";
+        title.innerHTML = `<p class="aboutTitleText">Hey! Still A Work in Progress!</p>`;
         body.innerHTML = `ლ(ಠ_ಠლ)`;
         imgOne.remove();
     }, 1000);

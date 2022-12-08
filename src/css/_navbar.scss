@@ -35,4 +35,20 @@
    font-family: 'Alexandria', sans-serif;
 }
 
+.aboutControls{
+   width: 85vw;
+   display: flex;
+   position: absolute;
+   justify-content: flex-end;
+}
+.resizeButton{
+   color: white;
+   transition: 0.15s ease-in-out;
+   padding-left: 1rem;
+}
+
+.resizeButton:hover{
+   color: rgb(98, 98, 98);
+}
+
 

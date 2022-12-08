@@ -27,7 +27,7 @@
     </div>
 
     <div class="selectionOuter">
-        <div class="selectionWrapper" data-aos="fade-up">
+        <div class="selectionWrapper">
             <div class="selectionCard">
                 <p class="cardText">Blogs</p>
                 <button class="cardButton" id="blogButton"><i class="fa-brands fa-blogger cardIcon"></i></button>
@@ -46,15 +46,19 @@
             </div>
             <div class="selectionCard">
                 <p class="cardText">Reflections</p>
-                <button class="cardButton" id="reflButton"></button><i class="fa-regular fa-id-badge cardIcon"></i></button>
+                <button class="cardButton" id="reflButton"><i class="fa-regular fa-id-badge cardIcon"></i></button>
             </div>
         </div>
     </div>
 
-    <div class="bodySection">
+    <div class="bodySection" id="bodyContainer">
         <div class="aboutMe" id="bodySection">
             <div class="aboutLeftCol">
-                <a class="aboutTitle" id="aboutTitle" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjZsMKvp-L7AhW0kYkEHfAxCg0QFnoECBAQAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHighway_of_Death&usg=AOvVaw2tto4vKQQS-0LvLi_rkPKE">About Me</a>
+                <div class="aboutControls">
+                    <i class="fa-solid fa-window-minimize resizeButton minimizeButton" id="minListOne" title="Minimize"></i>
+                    <i class="fa-solid fa-expand resizeButton maximizeButton" id="maxListOne" title="Maximize"></i>
+                </div>
+                <a class="aboutTitle" id="aboutTitle" href=""><p class="aboutTitleText">About Me<span><i class="fa-solid fa-link"></i></span></p></a>
                 <p class="aboutText" id="aboutText">Hey! My name is Guseyn Zarbaliyev! I’m a Senior currently studying at Staten Island Technical High School. As you can see, I have a passion for Web Development and Computer Science. With college looming ever so closer, I hope to major in some field of engineering or computer science, whether it be Cybersecurity or Electrical Engineering. My favorite genres of music are Garage Rock and Rap, with my favorite artists being the Eagles of Death Metal and Kendrick Lamar. In my spare time, I like to work out and spend time with friends, doing literally anything. Wether it is thrifting in the city or just playing games, I enjoy any time I spend with them. I am also from the country of Azerbaijan and speak Azeri nearly perfectly (aside from my horrendous accent).</p>
             </div>
             <div class="aboutRightCol">
@@ -63,7 +67,7 @@
         </div>
     </div>
 
-    <div class="signatureContainer" data-aos="fade-right">
+    <div class="signatureContainer">
         <div class="signatureWrapper">
             <div class="signatureLeftSide">
                 <img class="signatureImage" alt="Picture of (Yours Truely) Guseyn Zarbaliyev" src="https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai">

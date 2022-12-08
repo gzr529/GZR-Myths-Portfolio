@@ -1,14 +1,14 @@
 .bodySection{
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    justify-content: center;
     background-color:   rgb(27, 27, 27);
     position: relative;
     z-index: 50;
     padding: 0;
-    padding-top: 10rem;
+    padding-top: 2rem;
     margin: 0;
-    box-sizing: border-box;
+    align-items: center;
 }
 
 .aboutMe{
@@ -29,8 +29,24 @@
     font-style: bold;
     font-size: 3rem;
     margin-bottom: -0.7rem;
+    padding-top: 1rem;
     text-decoration: none;
     align-items: center;
+}
+
+.aboutTitleText{
+    padding: 0;
+    margin: 0;
+}
+
+.fa-link{
+    font-size: 3rem;
+    transform: scale(0.5);
+    transition: 0.15s ease-in-out;
+}
+
+.fa-link:hover{
+       color: rgb(98, 98, 98);
 }
 
 .aboutText{
@@ -74,7 +90,35 @@
     border: none;
 }
 
-.fa-link{
-    padding-left: 1rem;
+@media (max-width:414px){
+.bodySection{
+    padding-top: 1rem;
+    margin-top: 1rem;
+    height: auto;
+}
+
+div.bodySection:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 70vw;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.aboutMe{
+margin: 0;
+}
+    
+.aboutTitle{
     font-size: 1.5rem;
+}
+
+.aboutText{
+    font-size: 1rem;
+}
+
+.fa-link{
+    font-size: 1.5rem;
+    transform: scale(0.5);
+}
 }

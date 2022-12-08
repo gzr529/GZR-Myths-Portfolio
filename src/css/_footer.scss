@@ -78,3 +78,11 @@
     background-color: rgb(159, 81, 204);
 
 }
+
+@media (max-width:414px){
+.signatureContainer{
+    padding: 0;
+    margin: 0;
+    transform: scale(0.75);
+}
+}
