@@ -276,6 +276,7 @@
   align-items: center;
   margin: 0;
   padding: 2rem 0 0;
+  transition: all 1s ease-in-out;
   display: flex;
   position: relative;
 }
@@ -322,6 +323,7 @@
 .aboutText {
   color: #fff;
   font-size: 1.5rem;
+  transition: all .6s ease-in-out;
 }
 
 .aboutImg {

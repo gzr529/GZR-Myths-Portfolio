@@ -20,7 +20,7 @@ function resetValue() {
     currentValue = 0;
 }
 
-function infoBox(title, text){
+function infoBox(title, text, linkValue, currentValue){
     bodySection.insertAdjacentHTML("beforeend", `
         <div class="aboutMe" id="bodySection${currentValue}">
         <div class="aboutLeftCol">
@@ -28,20 +28,43 @@ function infoBox(title, text){
             <i class="fa-solid fa-window-minimize resizeButton minimizeButton" id="minList${currentValue}" title="Minimize"></i>
             <i class="fa-solid fa-expand resizeButton maximizeButton" id="maxList${currentValue}" title="Maximize"></i>
             </div>
-            <a class="aboutTitle" id="aboutTitle" href=""><p class="aboutTitleText">${title}</p></a>
+            <a class="aboutTitle" id="aboutTitle${currentValue}" href="${linkValue}"><p class="aboutTitleText">${title}</p></a>
             <p class="aboutText" id="aboutText${currentValue}">${text}</p>
         </div>
         <div class="aboutRightCol">
-            <img class="aboutImg" alt="Picture of Code" id ="aboutImageOne" src="https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai">
+            <img class="aboutImg" alt="Picture of Code" id ="aboutImageOne${currentValue}" src="https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai">
         </div>
         </div>
     `);
-    addValue()
-    document.getElementById("bodySection"+(currentValue-1)).style.height = "5rem";
-    document.getElementById("aboutText"+(currentValue-1)).style.color = "rgba(250, 235, 215, 0)";
-}
+    document.getElementById("minList"+(currentValue)).addEventListener("click", () => {
+    document.getElementById("bodySection"+(currentValue)).style.height = "5rem";
+    document.getElementById("aboutText"+(currentValue)).style.color = "rgba(250, 235, 215, 0)";
+    });
+    document.getElementById("maxList"+(currentValue)).addEventListener("click", () => {
+    document.getElementById("bodySection"+(currentValue)).style.height = "30rem";
+    document.getElementById("aboutText"+(currentValue)).style.color = "rgba(250, 235, 215, 1)";
+    });
+    addValue();
+};
 
-infoBox(`Hello`, `This is text`)
+infoBox(
+    `Hello`, 
+    `This is text`,
+    `https://www.youtube.com/`,
+    currentValue)
+
+infoBox(
+    `Hello2`, 
+    `This is text`,
+    `https://www.youtube.com/`,
+    currentValue)
+
+infoBox(
+    `Hello3`, 
+    `This is text`,
+    `https://www.youtube.com/`,
+    currentValue)
+
 
 document.getElementById('essayButton').addEventListener('click', function essayButton(){
     container.style.opacity = "0";
