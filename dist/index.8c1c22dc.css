@@ -41,10 +41,16 @@
 .splashImage {
   width: 100vw;
   height: 95vh;
+  color: #f6f9f9;
   background-image: url("https://imgur.com/ufsrP8P.png");
   background-position: center;
   background-size: cover;
-  transition: all 1s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-style: italic;
+  transition: all 1s ease-out;
+  display: flex;
   position: relative;
 }
 
@@ -107,6 +113,50 @@
 
 .selectionCard:hover {
   transform: translateY(-9rem);
+}
+
+@media (max-width: 414px) {
+  .selectionOuter {
+    height: auto;
+    background-color: #0ff;
+    justify-content: end;
+  }
+
+  .selectionCard {
+    width: 40vw;
+    height: auto;
+    margin: .3rem;
+    padding: 0;
+    display: flex;
+  }
+
+  .selectionWrapper {
+    z-index: 9999;
+    background-color: #1b1b1b;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+  }
+
+  .selectionCard:hover {
+    transform: translateY(0);
+  }
+
+  .cardText {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .cardIcon {
+    color: #faebd7;
+    margin: 0 0 1rem;
+    font-size: 3rem;
+    transition: all .3s ease-in-out;
+  }
 }
 
 .signatureContainer {

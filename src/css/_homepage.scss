@@ -1,26 +1,18 @@
 .splashImage{
+    display: flex;
     width: 100vw;
     height: 95vh; 
     background-image: url("https://imgur.com/ufsrP8P.png");
     background-position: center;
     background-size: cover;
     position: relative;
-    transition: 1s ease-in-out;
+    transition: 1s ease-out;
+    font-size: 5rem;
+    color: rgb(246, 249, 249);
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
 }
-
-// .splashBack{
-//     width: 100vw;
-//     height: 100vh; 
-//     background-image: url("https://i.imgur.com/eYPgI4m.png");
-//     background-position: center;
-//     background-size: cover;
-//     filter: blur(10px);
-//     position: relative;
-// }
-
-// .splashWrapper{
-//     display: flex;
-// }
 
 .selectionOuter{
     display: flex;
@@ -83,6 +75,49 @@
 
 .selectionCard:hover{   
     transform: translateY(-9rem);
+}
+
+@media (max-width:414px){
+.selectionOuter{
+    background-color: aqua;
+    justify-content: end;
+    height: auto;
+}
+.selectionCard{
+    display: flex;
+    width: 40vw;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    margin: 0.3rem;
+}
+
+.selectionWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 27, 27);
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    position: relative;
+}
+.selectionCard:hover{
+    transform: translateY(0rem); 
+}
+.cardText{
+    font-size: 1rem;
+    margin: 0;
+}
+
+.cardIcon{
+    font-size: 3rem;
+    color: antiquewhite;
+    transition: 0.3s ease-in-out;
+    margin: 0;
+    margin-bottom: 1rem;
+}
 }
 
 
