@@ -17,7 +17,7 @@
 
 .navIcon{
    color: rgb(255, 255, 255);
-   font-size: 2rem;
+   font-size: 2.9vw;
    padding-left: 1rem;
 }
 .headerLogo{
@@ -42,12 +42,14 @@
    justify-content: flex-end;
    padding: auto;
 }
+
 .resizeButton{
    color: white;
    transition: 0.15s ease-in-out;
-   padding-left: 1rem;
    background-color: rgba(39, 37, 37, 0.685);
-   padding: 1rem;
+   padding: 0.7rem;
+   font-size: 0.7rem;
+   z-index: 99;
 }
 
 .resizeButton:hover{

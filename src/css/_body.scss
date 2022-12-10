@@ -9,27 +9,25 @@
     padding-top: 2rem;
     margin: 0;
     align-items: center;
-    min-height: 10vh;
-    transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out; /* Firefox 4 */
-    -webkit-transition: 1s ease-in-out; /* Safari and Chrome */
-    -o-transition: 1s ease-in-out; /* Opera */
-    -ms-transition: 1s ease-in-out; /* Explorer 10 */
+    min-height: 30vh;
 }
 
 .aboutMe{
     display: flex;
+    flex-direction: row;
     background-color: rgb(48, 45, 45);
     width: 85vw;
+    height: auto;
+    max-height: 30vw;
     margin-bottom: 3rem;
     padding: 1rem;
-    border-top: 0.3rem solid;
-    border-color: rgb(137, 42, 192);
+    border-top: 4px solid;
+    border-image: linear-gradient(90deg, rgba(59,0,255,1) 0%, rgba(220,27,228,1) 52%, rgba(230,189,244,1)) 1 0 0 0;
     transition: 1s ease-in-out;
     text-overflow: ellipsis;
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
-     scrollbar-width: none;  /* Firefox */
+    scrollbar-width: none;  /* Firefox */
 }
 
 .aboutMe::-webkit-scrollbar {
@@ -41,12 +39,14 @@
     color:white;
     font-family: 'Alexandria', sans-serif;
     font-style: bold;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: -0.7rem;
     padding-top: 1rem;
     text-decoration: none;
     align-items: center;
     width: 85vw;
+    height: auto;
+    margin-top: -1rem;
 }
 
 .aboutTitleText{
@@ -66,26 +66,20 @@
 
 .aboutText{
     color: white;
-    font-size: 1.5rem;
+    font-size: 2vh;
     transition: 0.6s ease-in-out;
+    display: none;
 }
 
 .aboutImg{
-    width: 15rem;
-    height: 15rem;
-    display: none;
+    width: 15vw;
+    height: auto;
+    margin-top: 2vh;
+    border: 2px solid rgb(255, 255, 255);
 }
 .aboutLeftCol{
     display: flex;
     flex-direction: column;
-}
-
-.aboutRightCol{
-    flex-grow: 2;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
 }
 
 .bodyVideoWrapper{

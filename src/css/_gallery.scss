@@ -1,0 +1,53 @@
+.galleryWrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+section.galleryWrapper > *{ //Image Colunm
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+section.galleryWrapper > * > *{ //Image Wrapper
+    overflow: hidden;
+    margin: 2px;
+    padding: 0;
+}
+
+section.galleryWrapper > * > * > *{ //Image
+   width: 25vw;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    background-color: aqua;
+    transition: 0.3s;
+    background-position: center;
+    background-size: cover;
+    transition:all 0.5s ease;
+    -webkit-transition:all 0.5s ease;
+    -o-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+section.galleryWrapper > * > * >div:hover{
+    scale: (1.1);
+}
+
+div.g1, div.g8, div.g10, div.g15{
+    aspect-ratio: 1 / 1.75;
+    background-color: rgb(158, 207, 60);
+}
+
+div.g1 {
+    background-image: url("https://images.unsplash.com/photo-1670441182961-0bf8a667821f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+}

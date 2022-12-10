@@ -2,7 +2,9 @@
 @import "homepage.scss";
 @import "footer.scss";
 @import "body.scss";
+@import "gallery.scss";
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;400&family=Major+Mono+Display&family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
     background-color:   rgb(27, 27, 27);
@@ -12,6 +14,7 @@ body {
     scroll-behavior: smooth;
     font-family: 'Alexandria', sans-serif;
     font-family: 'Major Mono Display', monospace;
+    font-family: 'PT Serif', serif;
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
 }
@@ -28,3 +31,4 @@ body {
 .on{
     display: flex;
 }
+
