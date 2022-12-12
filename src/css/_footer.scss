@@ -79,10 +79,10 @@
 
 }
 
-@media (max-width:414px){
+@media (max-width:414px),(max-width:900px){
 .signatureContainer{
-    padding: 0;
-    margin: 0;
+    margin-top: -10vh;
+    padding-bottom: 5rem;
     transform: scale(0.75);
 }
 }

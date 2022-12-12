@@ -23,7 +23,7 @@ section.galleryWrapper > * > *{ //Image Wrapper
 }
 
 section.galleryWrapper > * > * > *{ //Image
-   width: 25vw;
+    width: 25vw;
     aspect-ratio: 1 / 1;
     height: auto;
     background-color: aqua;
@@ -50,4 +50,22 @@ div.g1, div.g8, div.g10, div.g15{
 
 div.g1 {
     background-image: url("https://images.unsplash.com/photo-1670441182961-0bf8a667821f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+}
+
+div.g5{
+    background-image: url("https://res.cloudinary.com/dtjiibzcn/image/upload/v1670813513/cld-sample-5.jpg")
+}
+
+@media (max-width:414px){
+.galleryWrapper{
+    overflow: hidden;
+}
+section.galleryWrapper > *{ //Image Colunm
+    width: 50vw;
+}
+section.galleryWrapper > * > *{ //Image Wrapper
+}
+section.galleryWrapper > * > * > *{ //Image
+    width: 50vw;
+}
 }
