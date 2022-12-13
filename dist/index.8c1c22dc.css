@@ -363,7 +363,7 @@
 
   .aboutMe {
     max-height: 30vh;
-    margin: 0 0 3vh;
+    margin: 0;
   }
 
   .aboutTitleText, .aboutTitleText:visited {
@@ -382,6 +382,33 @@
     font-size: 1.5rem;
     transform: scale(.5);
   }
+}
+
+.galleryTitle {
+  width: 100vw;
+  border-top: 1px solid #fff;
+}
+
+div.galleryTitle:before {
+  content: "";
+  width: 70vw;
+  border-top: 1px solid #fff;
+  position: absolute;
+  top: 0;
+}
+
+.galleryTitle > p:nth-child(1) {
+  color: #fff;
+  padding-left: 5vh;
+  font-size: 2rem;
+}
+
+.galleryTitle > p:nth-child(2) {
+  color: #575050;
+  margin-top: -2rem;
+  padding-left: 5vh;
+  font-size: 1.2rem;
+  font-style: italic;
 }
 
 .galleryWrapper {
@@ -412,18 +439,19 @@ section.galleryWrapper > * > * > * {
   width: 25vw;
   aspect-ratio: 1 / 1;
   height: auto;
-  -o-transition: all .5s ease;
+  -o-transition: all .5s ease-in-out;
   filter: saturate(1.6);
   background-color: #a465de;
   background-position: center;
   background-size: cover;
   margin: 0;
   padding: 0;
-  transition: all .5s;
+  transition: all .5s ease-in-out;
   overflow: hidden;
 }
 
 section.galleryWrapper > * > * > div:hover {
+  filter: saturate(1.6);
   scale: 1.1;
 }
 

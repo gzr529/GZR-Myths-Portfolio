@@ -1,3 +1,31 @@
+.galleryTitle{
+    width: 100vw;  
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+div.galleryTitle:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 70vw;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.galleryTitle> p:nth-child(1){
+    color: white;
+    padding-left: 5vh;
+    font-size: 2rem;
+}
+
+.galleryTitle> p:nth-child(2){
+    color: rgb(87, 80, 80);
+    margin-top: -2rem;
+    padding-left: 5vh;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+
 .galleryWrapper{
     display: flex;
     flex-direction: row;
@@ -30,10 +58,10 @@ section.galleryWrapper > * > * > *{ //Image
     transition: 0.3s;
     background-position: center;
     background-size: cover;
-    transition:all 0.5s ease;
-    -webkit-transition:all 0.5s ease;
-    -o-transition:all 0.5s ease;
-    -moz-transition:all 0.5s ease;
+    transition:all 0.5s ease-in-out;
+    -webkit-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -42,6 +70,7 @@ section.galleryWrapper > * > * > *{ //Image
 
 section.galleryWrapper > * > * >div:hover{
     scale: (1.1);
+    filter: saturate(1.6);
 }
 
 div.g1, div.g8, div.g10, div.g15{
