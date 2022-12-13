@@ -67,8 +67,7 @@
 .fullaboutMe > div > div > p{
 }
 
-.aboutTitle{
-    display: flex;
+.aboutTitleText, .aboutTitleText:visited{
     color:white;
     font-family: 'Alexandria', sans-serif;
     font-style: bold;
@@ -77,35 +76,28 @@
     padding-top: 1rem;
     text-decoration: none;
     align-items: center;
-    width: 85vw;
+    width: auto;
+    max-width: 85vw;
     height: auto;
     margin-top: -1rem;
+    z-index: 55;
+    transition: 0.3s all ease-in-out;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
 }
 
-.aboutTitleText{
-    padding: 0;
-    margin: 0;
-}
-
-.fa-link{
-    font-size: 3rem;
-    transform: scale(0.5);
-    transition: 0.15s ease-in-out;
-    color: aliceblue;
-}
-
-.fa-link:visited{
-    color: white;
-}
-
-
-.fa-link:hover{
+.aboutTitleText:hover, .aboutTitleText:visited:hover{
     color: rgb(98, 98, 98);
 }
 
-.linkBtn{
+// .noLink{
+//     pointer-events: none;
+//     color: aquamarine;
+// }
 
-}
+// .noLink:hover{
+//     color:white;
+// }
 
 .aboutText{
     color: white;
@@ -172,8 +164,8 @@ div.bodySection:before{
     max-height: 30vh;
     margin-bottom: 3vh;
 }
-    
-.aboutTitle{
+
+.aboutTitleText,.aboutTitleText:visited{
     font-size: 2vh;
 }
 

@@ -29,12 +29,7 @@ function infoBox(title, text, linkValue, linkBtn, currentValue, imageLink, divLe
                 <i class="fa-solid fa-window-minimize resizeButton minimizeButton" id="minList${currentValue}" title="Minimize"></i>
                 <i class="fa-solid fa-expand resizeButton maximizeButton" id="maxList${currentValue}" title="Maximize"></i>
             </div>
-            <div class="aboutTitle" id="aboutTitle${currentValue}">
-                <p class="aboutTitleText">${title}</p>
-                <a href="${linkValue}" class="linkBtn">
-                <i class="fa-solid fa- fa-link id="linkBtn${currentValue}"></i>
-                </a>
-            </div>
+            <a href="${linkValue}" class="aboutTitleText" id="linkBtn${currentValue}">${title}</a>
             <img class="aboutImg" alt="Picture" id ="aboutImageOne${currentValue}" src="${imageLink}"></img>
             <p class="aboutText" id="aboutText${currentValue}">${text}</p>
         </div>
@@ -55,7 +50,28 @@ function infoBox(title, text, linkValue, linkBtn, currentValue, imageLink, divLe
     document.getElementById("aboutText"+(currentValue)).style.display = "flex";
     });
     if (linkBtn === false) {
-    document.getElementById("linkBtn"+(currentValue)).style.opacity = "0";
+    document.getElementById("linkBtn"+(currentValue)).style.textDecoration = "none";
+    document.getElementById("linkBtn"+(currentValue)).style.pointerEvents = "none";
+    console.log(`LINKED`)
+    } else {
+    console.log(`NO LINK`)
+    }
+    addValue();
+};
+
+function presBox(title, text, linkValue, linkBtn, currentValue, imageLink, divLength){
+ bodySection.insertAdjacentHTML("beforeend", `
+<div class="${divLength}aboutMe fade" id="bodySection${currentValue}">
+        <div class="aboutLeftCol">
+            <a href="${linkValue}" class="aboutTitleText" id="linkBtn${currentValue}">${title}</a>
+            <img class="aboutImg" alt="Picture" id ="aboutImageOne${currentValue}" src="${imageLink}"></img>
+            <p class="aboutText" id="aboutText${currentValue}">${text}</p>
+        </div>
+        </div>
+    `);
+    if (linkBtn === false) {
+    document.getElementById("linkBtn"+(currentValue)).style.textDecoration = "none";
+    document.getElementById("linkBtn"+(currentValue)).style.pointerEvents = "none";
     console.log(`LINKED`)
     } else {
     console.log(`NO LINK`)
@@ -67,11 +83,36 @@ function infoBox(title, text, linkValue, linkBtn, currentValue, imageLink, divLe
 infoBox(
     `About Me`, 
     `Hey! My name is Guseyn Zarbaliyev! I’m a Senior currently studying at Staten Island Technical High School. As you can see, I have a passion for Web Development and Computer Science. With college looming ever so closer, I hope to major in some field of engineering or computer science, whether it be Cybersecurity or Electrical Engineering. My favorite genres of music are Garage Rock and Rap, with my favorite artists being the Eagles of Death Metal and Kendrick Lamar. In my spare time, I like to work out and spend time with friends, doing literally anything. Wether it is thrifting in the city or just playing games, I enjoy any time I spend with them. I am also from the country of Azerbaijan and speak Azeri nearly perfectly (aside from my horrendous accent).`,
-    `https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi`,
+    `https://floatingqrcode.com/`,
+    false,
+    currentValue,
+    `https://res.cloudinary.com/dtjiibzcn/image/upload/v1670910068/Sun_edsmpc.png`,
+    '')
+
+document.getElementById('blogButton').addEventListener('click', function blogButton(){
+    bodySection.style.opacity = "0";
+    setTimeout(() => { 
+        bodySection.innerHTML = "";
+        blogButton.disabled = true;
+    }, 999);
+    setTimeout(() => { 
+    infoBox(
+    `Blog 1 : (Socio-Political Consciousness)`,
+    `All across history: oppression, economic and social inequality, in addition to suffering, were all commonplace throughout society. From famine to war, since humanity's beginning on this planet, suffering was an expected part of daily life. In my eyes, the treatment that humanity endured can often be traced back to a common root - power and corruption. It's apparent that when one man can have control over another, it is inevitable that they will push their power to their very limit and abuse it as such. Even putting aside society, power structures are embedded into the very nature of human life. Look at parenthood, every child is expected to look at their parent as a figure of authority by nature. It’s in human nature to thirst for power since we are inherently selfish. Looking back some of the greatest atrocities known to man have been committed by tyrannical madmen that wish to solidify their power and use it to every extent possible. These people thrive in their own megalomania and develop a fear of losing their power. Historian Ludwig von Mises, once stated "The worst evils which mankind has ever had to endure were inflicted by bad governments.”<br><br> Despite this, I’m not trying to justify an anarchic agenda, quite the opposite actually. Viewing these inequalities that power brings makes me wish for a world where society can have leaders and people who act as true public servants, and will act in the best interest of the people. Changing the system from within rather than tearing it down is what should be done. The state of American politics in the current age is the antithesis of “serving the people”. Powerful politicians now only wish to retain their constituency and remain incumbent, not to mention the divide in government and mentality that American politics have caused within the people. Not to mention the bourgeoisie systemically oppressing the working class.  There is an inherent inequality and oppression in the current political and economic systems. Power is concentrated in the hands of a small group of individuals and corporations, which results in marginalized communities and individuals being denied access to opportunities and basic rights. Some may find the view point extreme or jarring, and people refuse to engage in any conversation with a person of an opposing political idealogy. However, I am all but perplexed by that mindset. You as an individual should always be open to new opinions, no matter how outlandish they may appear. Truely intelligent people surround themselves with even smarter people, it's as simple as that. And even if you felt as though your options were better than anyone else's, shouldn’t you engage in a legitimate, active conversation to try and sway the opinion of another? People have become so opposed to change and have become so in tune with individualism and the fact that they always feel as though they themselves are always right, it has halted the progression of our society.<br><br> However, I digress, since in the modern day, these issues aren't as clear and upfront. Rather than crimes against humanity, modern-day oppression comes in the form of class inequality and systemic oppression for the working class. The unrestrained capitalistic rhetoric this country has “enjoyed” is also leading to the problems of inequality we face as a first-world country. It simply doesn't add up. How can the richest country in the world have nearly 500,000 homeless people and those that still struggle just to live paycheck to paycheck? I look at opposing ideologies that can counter this unrestrained destruction of the middle class. Marxism and social democracy are two political ideologies that focus on issues of inequity, oppression, and power. Both ideologies believe in the need for a more egalitarian and just society, and seek to address issues of inequality and injustice. Though I oppose a true Marxist view, due to the fact of Marxism calls for total and utter revolution and reformation of society, I am keener on a social democratic view of society. Social democrats believe that change can be achieved through the democratic process, rather than through revolution. I believe that the government has a role to play in ensuring that all members of society have access to the necessities of life, such as healthcare, education, and housing. Strong labor unions and progressive taxation will be necessary in order to redistribute wealth and power from the wealthy to the less well-off. I seek to create a more egalitarian society through the use of the ballot box, rather than through violent upheaval. Our very nation is founded on the basis that the power is with the people and that under the Supreme Law of the Land, we can make the change from within without tearing down. <br><br>Despite this, I am not blind to the failures of communism and socialism. My parents themselves grew up in the Azerbaijan SSR, which was a part of the Soviet Union. They enjoyed a higher quality of life in their home country under the influence of the Soviet Union than they would have opposed if it didn't. But is their life in modern America better than it was in Azerbaijan? Certainly so. The Soviet Union is the perfect example of socialism gone wrong and it all came to the men in charge. Stalin and Lenin were both ultra nationalistic-authoritarians. No system of government is perfect, and leadership is key. A true utopia, is truly only accomplished when we can form a nation were a leader truly takes every single action in the best interest of the people, and nothing else, but this remains a dream.`,
+    `https://issuu.com/gzr529/docs/myths_-_blog_1`,
     true,
     currentValue,
-    `https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai`,
+    `https://images.unsplash.com/photo-1546375570-2ae6a397bbcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80`,
     '')
+    splashImg.style.backgroundImage=`url("https://i.imgur.com/eYPgI4m.png")`; 
+    }, 1000);
+    setTimeout(() => { 
+        bodySection.style.opacity = "1";
+    }, 1200);
+    setTimeout(() => { 
+        blogButton.disabled = false;
+    }, 7000); 
+});
 
 document.getElementById('essayButton').addEventListener('click', function essayButton(){
     bodySection.style.opacity = "0";
@@ -110,7 +151,7 @@ document.getElementById('projButton').addEventListener('click', function projBut
     `WIP`, 
     `Swearem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque accumsan nisl, a mattis eros vestibulum et. Vestibulum placerat purus ut nibh aliquam fringilla. Aenean et tortor diam, id tempor elit. Vivamus sagittis ornare fuck. Nullam lacinia jizzmopper vel diam tempor et consequat ligula porttitor.`,
     `https://www.youtube.com/`,
-    true,
+    false,
     currentValue,
     `https://media.tenor.com/ToI4KGJcIKEAAAAC/clean-cleaning.gif`,
     '')
@@ -131,27 +172,27 @@ document.getElementById('presButton').addEventListener('click', function presBut
         presButton.disabled = true;
     }, 999);
     setTimeout(() => { 
-        infoBox(
+        presBox(
         `Celtic Mythology Presentation`, 
         `<div class="bodyVideoWrapper">
         <iframe class="bodyVideo" src="https://www.youtube.com/embed/RhtoTgRwoEA"></iframe>
         <iframe class="embedSlides" src="https://docs.google.com/presentation/d/e/2PACX-1vREk9uheugytWonYUcAKtyiXLOWZ5ZsVwu_-NIXBpqmWyw3WYB23qTDAyYgt-ICUDc4SNxPZI1e13W9/embed?start=false&loop=false&delayms=5000"></iframe>
         </div>`,
-        `https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi`,
+        `https://docs.google.com/presentation/d/17IN3PgDjWq04AIruyPtNQ4yLo73TxmvNZnEjd4lVhh4/edit?usp=sharing`,
         true,
         currentValue,
         `https://res.cloudinary.com/dtjiibzcn/image/upload/v1670860334/1x1_vvdr6w.png`,
         'full')
-        infoBox(
+        presBox(
         `David and Goliath Bible Presentation`, 
         `<div class="bodyVideoWrapper">
         <iframe class="embedSlides" src="https://docs.google.com/presentation/d/e/2PACX-1vQApdhhjsWpJTrnwXbOsM3Ahz2L65QeFOIT55nCBfL5EYZhSNNGnaI8N4xOg48eCai3guRJ9O-b6LlY/embed?start=false&loop=false&delayms=3000"></iframe>
         </div>`,
-        `https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi`,
+        `https://docs.google.com/presentation/d/1LYHYTYhdTwBgWxtaX1eBp6EPOr7GDYEUPlriF8b1J-c/edit?usp=sharing`,
         true,
         currentValue,
         `https://res.cloudinary.com/dtjiibzcn/image/upload/v1670860334/1x1_vvdr6w.png`,
-        'full')  
+        'full')
         imgOne.remove();
     }, 1000);
     setTimeout(() => { 
@@ -160,31 +201,6 @@ document.getElementById('presButton').addEventListener('click', function presBut
     setTimeout(() => { 
         presButton.disabled = false;
     }, 6000); 
-});
-
-document.getElementById('blogButton').addEventListener('click', function blogButton(){
-    bodySection.style.opacity = "0";
-    setTimeout(() => { 
-        bodySection.innerHTML = "";
-        blogButton.disabled = true;
-    }, 999);
-    setTimeout(() => { 
-    infoBox(
-    `Blog 1 : (Socio-Political Consciousness)`,
-    `All across history: oppression, economic and social inequality, in addition to suffering, were all commonplace throughout society. From famine to war, since humanity's beginning on this planet, suffering was an expected part of daily life. In my eyes, the treatment that humanity endured can often be traced back to a common root - power and corruption. It's apparent that when one man can have control over another, it is inevitable that they will push their power to their very limit and abuse it as such. Even putting aside society, power structures are embedded into the very nature of human life. Look at parenthood, every child is expected to look at their parent as a figure of authority by nature. It’s in human nature to thirst for power since we are inherently selfish. Looking back some of the greatest atrocities known to man have been committed by tyrannical madmen that wish to solidify their power and use it to every extent possible. These people thrive in their own megalomania and develop a fear of losing their power. Historian Ludwig von Mises, once stated "The worst evils which mankind has ever had to endure were inflicted by bad governments.”<br><br> Despite this, I’m not trying to justify an anarchic agenda, quite the opposite actually. Viewing these inequalities that power brings makes me wish for a world where society can have leaders and people who act as true public servants, and will act in the best interest of the people. Changing the system from within rather than tearing it down is what should be done. The state of American politics in the current age is the antithesis of “serving the people”. Powerful politicians now only wish to retain their constituency and remain incumbent, not to mention the divide in government and mentality that American politics have caused within the people. Not to mention the bourgeoisie systemically oppressing the working class.  There is an inherent inequality and oppression in the current political and economic systems. Power is concentrated in the hands of a small group of individuals and corporations, which results in marginalized communities and individuals being denied access to opportunities and basic rights. Some may find the view point extreme or jarring, and people refuse to engage in any conversation with a person of an opposing political idealogy. However, I am all but perplexed by that mindset. You as an individual should always be open to new opinions, no matter how outlandish they may appear. Truely intelligent people surround themselves with even smarter people, it's as simple as that. And even if you felt as though your options were better than anyone else's, shouldn’t you engage in a legitimate, active conversation to try and sway the opinion of another? People have become so opposed to change and have become so in tune with individualism and the fact that they always feel as though they themselves are always right, it has halted the progression of our society.<br><br> However, I digress, since in the modern day, these issues aren't as clear and upfront. Rather than crimes against humanity, modern-day oppression comes in the form of class inequality and systemic oppression for the working class. The unrestrained capitalistic rhetoric this country has “enjoyed” is also leading to the problems of inequality we face as a first-world country. It simply doesn't add up. How can the richest country in the world have nearly 500,000 homeless people and those that still struggle just to live paycheck to paycheck? I look at opposing ideologies that can counter this unrestrained destruction of the middle class. Marxism and social democracy are two political ideologies that focus on issues of inequity, oppression, and power. Both ideologies believe in the need for a more egalitarian and just society, and seek to address issues of inequality and injustice. Though I oppose a true Marxist view, due to the fact of Marxism calls for total and utter revolution and reformation of society, I am keener on a social democratic view of society. Social democrats believe that change can be achieved through the democratic process, rather than through revolution. I believe that the government has a role to play in ensuring that all members of society have access to the necessities of life, such as healthcare, education, and housing. Strong labor unions and progressive taxation will be necessary in order to redistribute wealth and power from the wealthy to the less well-off. I seek to create a more egalitarian society through the use of the ballot box, rather than through violent upheaval. Our very nation is founded on the basis that the power is with the people and that under the Supreme Law of the Land, we can make the change from within without tearing down. <br><br>Despite this, I am not blind to the failures of communism and socialism. My parents themselves grew up in the Azerbaijan SSR, which was a part of the Soviet Union. They enjoyed a higher quality of life in their home country under the influence of the Soviet Union than they would have opposed if it didn't. But is their life in modern America better than it was in Azerbaijan? Certainly so. The Soviet Union is the perfect example of socialism gone wrong and it all came to the men in charge. Stalin and Lenin were both ultra nationalistic-authoritarians. No system of government is perfect, and leadership is key. A true utopia, is truly only accomplished when we can form a nation were a leader truly takes every single action in the best interest of the people, and nothing else, but this remains a dream.`,
-    `https://www.youtube.com/`,
-    true,
-    currentValue,
-    `https://images.unsplash.com/photo-1546375570-2ae6a397bbcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80`,
-    '')
-    splashImg.style.backgroundImage=`url("https://i.imgur.com/eYPgI4m.png")`; 
-    }, 1000);
-    setTimeout(() => { 
-        bodySection.style.opacity = "1";
-    }, 1200);
-    setTimeout(() => { 
-        blogButton.disabled = false;
-    }, 7000); 
 });
 
 document.getElementById('reflButton').addEventListener('click', function reflButton(){
@@ -198,7 +214,7 @@ document.getElementById('reflButton').addEventListener('click', function reflBut
     `WIP`, 
     `Swearem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque accumsan nisl, a mattis eros vestibulum et. Vestibulum placerat purus ut nibh aliquam fringilla. Aenean et tortor diam, id tempor elit. Vivamus sagittis ornare fuck. Nullam lacinia jizzmopper vel diam tempor et consequat ligula porttitor.`,
     `https://www.youtube.com/`,
-    true,
+    false,
     currentValue,
     `https://media.tenor.com/ToI4KGJcIKEAAAAC/clean-cleaning.gif`,
     '')
