@@ -17,7 +17,7 @@
 
 .navIcon{
    color: rgb(255, 255, 255);
-   font-size: 2rem;
+   font-size: 2.9vw;
    padding-left: 1rem;
 }
 .headerLogo{
@@ -35,4 +35,34 @@
    font-family: 'Alexandria', sans-serif;
 }
 
+.aboutControls{
+   width: 85vw;
+   display: flex;
+   position: absolute;
+   justify-content: flex-end;
+   padding: auto;
+}
+
+.resizeButton{
+   color: white;
+   transition: 0.15s ease-in-out;
+   background-color: rgba(39, 37, 37, 0.685);
+   padding: 0.7rem;
+   font-size: 0.7rem;
+   z-index: 99;
+}
+
+.resizeButton:hover{
+   color: rgb(98, 98, 98);
+}
+
+@media (max-width:414px),(max-width:900px){
+.headerTitle{
+font-size: 2vh;
+}
+
+.headerBar{
+   height: 4vh;
+}
+}
 

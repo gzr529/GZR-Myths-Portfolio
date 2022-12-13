@@ -3,7 +3,7 @@
     justify-content: center;
     width: 100vw;
     padding-bottom: 2rem;
-    transition: 2s ease-in-out;
+    margin-top: 2vh;
 }
 
 .signatureWrapper{
@@ -77,4 +77,13 @@
 .icon:hover{
     background-color: rgb(159, 81, 204);
 
+}
+
+@media (max-width:414px),(max-width:900px){
+.signatureName{
+    font-size: 1.3rem;
+}
+.signatureContainer{
+    transform: scale(0.75);
+}
 }
