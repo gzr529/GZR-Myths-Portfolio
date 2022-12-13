@@ -104,10 +104,10 @@ document.getElementById('blogButton').addEventListener('click', function blogBut
     currentValue,
     `https://images.unsplash.com/photo-1546375570-2ae6a397bbcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80`,
     '')
-    splashImg.style.backgroundImage=`url("https://i.imgur.com/eYPgI4m.png")`; 
     }, 1000);
     setTimeout(() => { 
         bodySection.style.opacity = "1";
+        splashImg.style.backgroundImage=`url("https://imgur.com/ufsrP8P.png");`
     }, 1200);
     setTimeout(() => { 
         blogButton.disabled = false;
@@ -135,7 +135,7 @@ document.getElementById('essayButton').addEventListener('click', function essayB
         bodySection.style.opacity = "1";
     }, 1200);
     setTimeout(() => { 
-     essayButton.disabled = false;
+        essayButton.disabled = false;
     }, 7000); 
 });
 
@@ -176,9 +176,9 @@ document.getElementById('presButton').addEventListener('click', function presBut
         `Celtic Mythology Presentation`, 
         `<div class="bodyVideoWrapper">
         <iframe class="bodyVideo" src="https://www.youtube.com/embed/RhtoTgRwoEA"></iframe>
-        <iframe class="embedSlides" src="https://docs.google.com/presentation/d/e/2PACX-1vREk9uheugytWonYUcAKtyiXLOWZ5ZsVwu_-NIXBpqmWyw3WYB23qTDAyYgt-ICUDc4SNxPZI1e13W9/embed?start=false&loop=false&delayms=5000"></iframe>
+        <iframe class="embedSlides" src="https://docs.google.com/presentation/d/e/2PACX-1vSqdndWInGTun0gMwkWiFG1IwO4ls7X5YvvO3XkL_mj5fhChAAm3mT_rHNVqoiBep_iR9QwjecwkeOe/embed?start=false&loop=false&delayms=3000"></iframe>
         </div>`,
-        `https://docs.google.com/presentation/d/17IN3PgDjWq04AIruyPtNQ4yLo73TxmvNZnEjd4lVhh4/edit?usp=sharing`,
+        `https://docs.google.com/presentation/d/1xJjiyg86yTakVPs4nT0KH0Z_YJqIaHfI12vMZ1gQlCE/edit?usp=sharing`,
         true,
         currentValue,
         `https://res.cloudinary.com/dtjiibzcn/image/upload/v1670860334/1x1_vvdr6w.png`,

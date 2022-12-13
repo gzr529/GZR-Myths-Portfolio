@@ -387,6 +387,7 @@
 .galleryTitle {
   width: 100vw;
   border-top: 1px solid #fff;
+  margin-top: 2vh;
 }
 
 div.galleryTitle:before {
@@ -572,7 +573,7 @@ div.g16 {
 }
 
 .selectionCard > div {
-  height: 3vh;
+  height: 4vh;
   width: 15vw;
   justify-content: center;
   align-items: center;
@@ -645,6 +646,7 @@ div.g16 {
   .selectionCard {
     width: 95vw;
     height: 6vh;
+    min-height: 3rem;
     z-index: 99;
     border-radius: 1.3rem;
     flex-direction: row-reverse;
@@ -675,6 +677,7 @@ div.g16 {
 
   .selectionCard > button {
     height: 6vh;
+    min-height: 3rem;
     color: #faebd700;
     z-index: 999;
     background-color: #575658;

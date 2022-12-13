@@ -42,7 +42,7 @@
     align-items: center;
     margin: 0;
     padding: 0;
-    height: 3vh;
+    height: 4vh;
     width: 15vw;
 }
 
@@ -117,6 +117,7 @@
     align-items: center;
     width: 95vw;
     height: 6vh;
+    min-height: 3rem;
     margin: 0.3rem;
     z-index: 99;
 }
@@ -145,6 +146,7 @@
     display: flex;
     font-size: 3rem;
     height: 6vh;
+        min-height: 3rem;
     color: rgba(250, 235, 215, 0);
     transition: 0.3s ease-in-out;
     border-top-left-radius: 1.3rem; 
