@@ -251,7 +251,7 @@
   position: relative;
 }
 
-.aboutMe {
+.aboutMe, .fullaboutMe {
   width: 85vw;
   height: auto;
   text-overflow: ellipsis;
@@ -260,32 +260,18 @@
   background-color: #302d2d;
   border-top: 4px solid;
   border-image: linear-gradient(90deg, #3b00ff 0%, #dc1be4 52%, #e6bdf4) 1 0 0;
+  border-bottom-right-radius: .7rem;
+  border-bottom-left-radius: 1rem;
   flex-direction: row;
   margin-bottom: 3vh;
   padding: 1rem;
   display: flex;
   overflow-y: scroll;
+  box-shadow: 0 5px 15px #5f567256;
 }
 
 .aboutMe::-webkit-scrollbar, .fullaboutMe::-webkit-scrollbar {
   display: none;
-}
-
-.fullaboutMe {
-  width: 85vw;
-  height: auto;
-  text-overflow: ellipsis;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  background-color: #302d2d;
-  border-top: 4px solid;
-  border-image: linear-gradient(90deg, #3b00ff 0%, #dc1be4 52%, #e6bdf4) 1 0 0;
-  flex-direction: row;
-  margin-bottom: 3vh;
-  padding: 1rem;
-  transition: all 1s ease-in-out;
-  display: flex;
-  overflow-y: scroll;
 }
 
 .fullaboutMe > div > img {

@@ -23,7 +23,7 @@
     transition: 0.75s all ease-in-out;
 }
 
-.aboutMe{
+.aboutMe, .fullaboutMe{
     display: flex;
     flex-direction: row;
     background-color: rgb(48, 45, 45);
@@ -37,27 +37,13 @@
     overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    box-shadow: rgba(95, 86, 114, 0.336) 0px 5px 15px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 0.7rem;
 }
 
 .aboutMe::-webkit-scrollbar,.fullaboutMe::-webkit-scrollbar {
   display: none;
-}
-
-.fullaboutMe{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(48, 45, 45);
-    width: 85vw;
-    height: auto;
-    margin-bottom: 3vh;
-    padding: 1rem;
-    border-top: 4px solid;
-    border-image: linear-gradient(90deg, rgba(59,0,255,1) 0%, rgba(220,27,228,1) 52%, rgba(230,189,244,1)) 1 0 0 0;
-    transition: 1s ease-in-out;
-    text-overflow: ellipsis;
-    overflow-y: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
 }
 
 .fullaboutMe > div > img{
