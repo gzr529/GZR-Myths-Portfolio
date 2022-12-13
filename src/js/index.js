@@ -8,7 +8,7 @@ const splashImg = document.getElementById("splashImage")
 const imgOne = document.getElementById("aboutImageOne")
 const container = document.getElementById("bodySection")
 const bodySection = document.getElementById("bodyContainer")
-const windowControls = document.getElementById("windowControls")
+const aboutMe = document.getElementsByClassName(`fade`)
 
 let currentValue = 0;
 
@@ -23,14 +23,19 @@ function resetValue() {
 
 function infoBox(title, text, linkValue, linkBtn, currentValue, imageLink, divLength){
     bodySection.insertAdjacentHTML("beforeend", `
-        <div class="${divLength}aboutMe" id="bodySection${currentValue}">
+        <div class="${divLength}aboutMe fade" id="bodySection${currentValue}">
         <div class="aboutLeftCol">
             <div class="aboutControls" id="windowControls">
-            <i class="fa-solid fa-window-minimize resizeButton minimizeButton" id="minList${currentValue}" title="Minimize"></i>
-            <i class="fa-solid fa-expand resizeButton maximizeButton" id="maxList${currentValue}" title="Maximize"></i>
+                <i class="fa-solid fa-window-minimize resizeButton minimizeButton" id="minList${currentValue}" title="Minimize"></i>
+                <i class="fa-solid fa-expand resizeButton maximizeButton" id="maxList${currentValue}" title="Maximize"></i>
             </div>
-            <div class="aboutTitle" id="aboutTitle${currentValue}"><p class="aboutTitleText">${title}</p><a href="${linkValue}" class="linkBtn"><i class="fa-solid fa- fa-link id="linkBtn${currentValue}"></i></a></div>
-            <img class="aboutImg" alt="Picture" id ="aboutImageOne${currentValue}" src="${imageLink}">
+            <div class="aboutTitle" id="aboutTitle${currentValue}">
+                <p class="aboutTitleText">${title}</p>
+                <a href="${linkValue}" class="linkBtn">
+                <i class="fa-solid fa- fa-link id="linkBtn${currentValue}"></i>
+                </a>
+            </div>
+            <img class="aboutImg" alt="Picture" id ="aboutImageOne${currentValue}" src="${imageLink}"></img>
             <p class="aboutText" id="aboutText${currentValue}">${text}</p>
         </div>
         </div>
@@ -59,19 +64,21 @@ function infoBox(title, text, linkValue, linkBtn, currentValue, imageLink, divLe
 };
 
 //(TITLE, TEXT DESCRIPTION, LINK, , LINK BTN TOGGLE, VALUE FUNCTION VARIABLE, BLANK FOR DEFAULT DIV 'full' TO EXPAND FULLY)
-
 infoBox(
     `About Me`, 
     `Hey! My name is Guseyn Zarbaliyev! I’m a Senior currently studying at Staten Island Technical High School. As you can see, I have a passion for Web Development and Computer Science. With college looming ever so closer, I hope to major in some field of engineering or computer science, whether it be Cybersecurity or Electrical Engineering. My favorite genres of music are Garage Rock and Rap, with my favorite artists being the Eagles of Death Metal and Kendrick Lamar. In my spare time, I like to work out and spend time with friends, doing literally anything. Wether it is thrifting in the city or just playing games, I enjoy any time I spend with them. I am also from the country of Azerbaijan and speak Azeri nearly perfectly (aside from my horrendous accent).`,
-    `https://www.youtube.com/`,
-    false,
+    `https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi`,
+    true,
     currentValue,
     `https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai`,
     '')
 
 document.getElementById('essayButton').addEventListener('click', function essayButton(){
+    bodySection.style.opacity = "0";
+    setTimeout(() => { 
     bodySection.innerHTML = "";
     essayButton.disabled = true;
+    }, 999); 
     setTimeout(() => { 
     infoBox(
     `No Village for Prideful Men (Fairy Tale Writing Piece)`, 
@@ -81,19 +88,22 @@ document.getElementById('essayButton').addEventListener('click', function essayB
     currentValue,
     `https://images.unsplash.com/photo-1599689018034-48e2ead82951?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1624&q=80`,
     '')
-    imgOne.remove();
-    splashImg.style.backgroundImage=`url("https://i.imgur.com/eYPgI4m.png")`; 
+        splashImg.style.backgroundImage=`url("https://i.imgur.com/eYPgI4m.png")`; 
     }, 1000);
     setTimeout(() => { 
-    bodySection.style.opacity = "1";
+        bodySection.style.opacity = "1";
     }, 1200);
     setTimeout(() => { 
-    essayButton.disabled = false;
+     essayButton.disabled = false;
     }, 7000); 
 });
 
 document.getElementById('projButton').addEventListener('click', function projButton(){
-    bodySection.innerHTML = "";
+    bodySection.style.opacity = "0";
+    setTimeout(() => { 
+        bodySection.innerHTML = "";
+        projButton.disabled = true;
+    }, 999);
     projButton.disabled = true;
     setTimeout(() => { 
     infoBox(
@@ -107,7 +117,7 @@ document.getElementById('projButton').addEventListener('click', function projBut
     imgOne.remove()
     }, 1000);
     setTimeout(() => { 
-        container.style.opacity = "1";
+        bodySection.style.opacity = "1";
     }, 1200);
     setTimeout(() => { 
         projButton.disabled = false;
@@ -115,8 +125,11 @@ document.getElementById('projButton').addEventListener('click', function projBut
 });
 
 document.getElementById('presButton').addEventListener('click', function presButton(){
-    bodySection.innerHTML = "";
-    presButton.disabled = true;
+    bodySection.style.opacity = "0";
+    setTimeout(() => { 
+        bodySection.innerHTML = "";
+        presButton.disabled = true;
+    }, 999);
     setTimeout(() => { 
         infoBox(
         `Celtic Mythology Presentation`, 
@@ -128,13 +141,21 @@ document.getElementById('presButton').addEventListener('click', function presBut
         true,
         currentValue,
         `https://res.cloudinary.com/dtjiibzcn/image/upload/v1670860334/1x1_vvdr6w.png`,
+        'full')
+        infoBox(
+        `David and Goliath Bible Presentation`, 
+        `<div class="bodyVideoWrapper">
+        <iframe class="embedSlides" src="https://docs.google.com/presentation/d/e/2PACX-1vQApdhhjsWpJTrnwXbOsM3Ahz2L65QeFOIT55nCBfL5EYZhSNNGnaI8N4xOg48eCai3guRJ9O-b6LlY/embed?start=false&loop=false&delayms=3000"></iframe>
+        </div>`,
+        `https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi`,
+        true,
+        currentValue,
+        `https://res.cloudinary.com/dtjiibzcn/image/upload/v1670860334/1x1_vvdr6w.png`,
         'full')  
         imgOne.remove();
-        windowControls.style.display = "hidden";
-        windowControls.remove();
     }, 1000);
     setTimeout(() => { 
-        container.style.opacity = "1";
+        bodySection.style.opacity = "1";
     }, 1200);
     setTimeout(() => { 
         presButton.disabled = false;
@@ -142,8 +163,11 @@ document.getElementById('presButton').addEventListener('click', function presBut
 });
 
 document.getElementById('blogButton').addEventListener('click', function blogButton(){
-    bodySection.innerHTML = "";
-    blogButton.disabled = true;
+    bodySection.style.opacity = "0";
+    setTimeout(() => { 
+        bodySection.innerHTML = "";
+        blogButton.disabled = true;
+    }, 999);
     setTimeout(() => { 
     infoBox(
     `Blog 1 : (Socio-Political Consciousness)`,
@@ -156,16 +180,19 @@ document.getElementById('blogButton').addEventListener('click', function blogBut
     splashImg.style.backgroundImage=`url("https://i.imgur.com/eYPgI4m.png")`; 
     }, 1000);
     setTimeout(() => { 
-    bodySection.style.opacity = "1";
+        bodySection.style.opacity = "1";
     }, 1200);
     setTimeout(() => { 
-    blogButton.disabled = false;
+        blogButton.disabled = false;
     }, 7000); 
 });
 
 document.getElementById('reflButton').addEventListener('click', function reflButton(){
-    bodySection.innerHTML = "";
-    reflButton.disabled = true;
+    bodySection.style.opacity = "0";
+    setTimeout(() => { 
+        bodySection.innerHTML = "";
+        reflButton.disabled = true;
+    }, 999);
     setTimeout(() => { 
     infoBox(
     `WIP`, 
@@ -178,7 +205,7 @@ document.getElementById('reflButton').addEventListener('click', function reflBut
     imgOne.remove()
     }, 1000);
     setTimeout(() => { 
-        container.style.opacity = "1";
+        bodySection.style.opacity = "1";
     }, 1200);
     setTimeout(() => { 
         reflButton.disabled = false;
