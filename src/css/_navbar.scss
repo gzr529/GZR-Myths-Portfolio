@@ -56,4 +56,13 @@
    color: rgb(98, 98, 98);
 }
 
+@media (max-width:414px),(max-width:900px){
+.headerTitle{
+font-size: 2vh;
+}
+
+.headerBar{
+   height: 4vh;
+}
+}
 

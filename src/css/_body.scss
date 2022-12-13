@@ -18,8 +18,27 @@
     background-color: rgb(48, 45, 45);
     width: 85vw;
     height: auto;
-    max-height: 30vw;
-    margin-bottom: 3rem;
+    margin-bottom: 3vh;
+    padding: 1rem;
+    border-top: 4px solid;
+    border-image: linear-gradient(90deg, rgba(59,0,255,1) 0%, rgba(220,27,228,1) 52%, rgba(230,189,244,1)) 1 0 0 0;
+    text-overflow: ellipsis;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.aboutMe::-webkit-scrollbar,.fullaboutMe::-webkit-scrollbar {
+  display: none;
+}
+
+.fullaboutMe{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(48, 45, 45);
+    width: 85vw;
+    height: auto;
+    margin-bottom: 3vh;
     padding: 1rem;
     border-top: 4px solid;
     border-image: linear-gradient(90deg, rgba(59,0,255,1) 0%, rgba(220,27,228,1) 52%, rgba(230,189,244,1)) 1 0 0 0;
@@ -30,8 +49,11 @@
     scrollbar-width: none;  /* Firefox */
 }
 
-.aboutMe::-webkit-scrollbar {
-  display: none;
+.fullaboutMe > div > img{
+    display: none;
+}
+
+.fullaboutMe > div > div > p{
 }
 
 .aboutTitle{
@@ -58,10 +80,20 @@
     font-size: 3rem;
     transform: scale(0.5);
     transition: 0.15s ease-in-out;
+    color: aliceblue;
 }
 
+.fa-link:visited{
+    color: white;
+}
+
+
 .fa-link:hover{
-       color: rgb(98, 98, 98);
+    color: rgb(98, 98, 98);
+}
+
+.linkBtn{
+
 }
 
 .aboutText{
@@ -69,11 +101,14 @@
     font-size: 2vh;
     transition: 0.6s ease-in-out;
     display: none;
+    padding-top: 1vh;
+    border-top: 1px solid rgb(240, 236, 236);
 }
 
 .aboutImg{
     width: 15vw;
     height: auto;
+    aspect-ratio: auto;
     margin-top: 2vh;
     border: 2px solid rgb(255, 255, 255);
 }
@@ -88,19 +123,25 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    border-top: 1px solid rgb(240, 236, 236);
+    margin-top: 1rem;
 }
 
-.bodyVideo{
-    width: 84.5vw;
-    height: 95vh;
-    aspect-ratio: 16,9;
+.bodyVideo,.embedSlides{
+    width: 85vw;
+    height: auto;
+    aspect-ratio: 16/9;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
     border: none;
 }
 
-@media (max-width:414px){
+.embedSlides{
+    aspect-ratio: 16/10;
+}
+
+@media (max-width:414px),(max-width:900px){
 .bodySection{
     padding-top: 1rem;
     margin-top: 1rem;
@@ -116,15 +157,22 @@ div.bodySection:before{
 }
 
 .aboutMe{
-margin: 0;
+    margin: 0;
+    max-height: 30vh;
+    margin-bottom: 3vh;
 }
     
 .aboutTitle{
-    font-size: 1.5rem;
+    font-size: 2vh;
 }
 
 .aboutText{
     font-size: 1rem;
+}
+
+.aboutImg{
+    width: 30vw;
+
 }
 
 .fa-link{

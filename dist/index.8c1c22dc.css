@@ -59,6 +59,16 @@
   color: #626262;
 }
 
+@media (max-width: 414px), (max-width: 900px) {
+  .headerTitle {
+    font-size: 2vh;
+  }
+
+  .headerBar {
+    height: 4vh;
+  }
+}
+
 .splashImage {
   width: 100vw;
   height: 90vh;
@@ -69,7 +79,6 @@
   background-size: cover;
   margin: 0;
   padding: 0;
-  transition: all 1s ease-out;
   display: flex;
   position: absolute;
 }
@@ -85,7 +94,6 @@
   margin: 0;
   padding: 0;
   font-size: 2rem;
-  transition: all 1s ease-out;
   display: flex;
 }
 
@@ -209,9 +217,11 @@
 }
 
 @media (max-width: 414px), (max-width: 900px) {
+  .signatureName {
+    font-size: 1.3rem;
+  }
+
   .signatureContainer {
-    margin-top: -10vh;
-    padding-bottom: 5rem;
     transform: scale(.75);
   }
 }
@@ -232,7 +242,6 @@
 .aboutMe {
   width: 85vw;
   height: auto;
-  max-height: 30vw;
   text-overflow: ellipsis;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -240,14 +249,34 @@
   border-top: 4px solid;
   border-image: linear-gradient(90deg, #3b00ff 0%, #dc1be4 52%, #e6bdf4) 1 0 0;
   flex-direction: row;
-  margin-bottom: 3rem;
+  margin-bottom: 3vh;
+  padding: 1rem;
+  display: flex;
+  overflow-y: scroll;
+}
+
+.aboutMe::-webkit-scrollbar, .fullaboutMe::-webkit-scrollbar {
+  display: none;
+}
+
+.fullaboutMe {
+  width: 85vw;
+  height: auto;
+  text-overflow: ellipsis;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: #302d2d;
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, #3b00ff 0%, #dc1be4 52%, #e6bdf4) 1 0 0;
+  flex-direction: row;
+  margin-bottom: 3vh;
   padding: 1rem;
   transition: all 1s ease-in-out;
   display: flex;
   overflow-y: scroll;
 }
 
-.aboutMe::-webkit-scrollbar {
+.fullaboutMe > div > img {
   display: none;
 }
 
@@ -272,9 +301,14 @@
 }
 
 .fa-link {
+  color: #f0f8ff;
   font-size: 3rem;
   transition: all .15s ease-in-out;
   transform: scale(.5);
+}
+
+.fa-link:visited {
+  color: #fff;
 }
 
 .fa-link:hover {
@@ -283,6 +317,8 @@
 
 .aboutText {
   color: #fff;
+  border-top: 1px solid #f0ecec;
+  padding-top: 1vh;
   font-size: 2vh;
   transition: all .6s ease-in-out;
   display: none;
@@ -291,6 +327,7 @@
 .aboutImg {
   width: 15vw;
   height: auto;
+  aspect-ratio: auto;
   border: 2px solid #fff;
   margin-top: 2vh;
 }
@@ -302,23 +339,29 @@
 
 .bodyVideoWrapper {
   width: 100%;
+  border-top: 1px solid #f0ecec;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
   display: flex;
 }
 
-.bodyVideo {
-  width: 84.5vw;
-  height: 95vh;
-  aspect-ratio: 16, 9;
+.bodyVideo, .embedSlides {
+  width: 85vw;
+  height: auto;
+  aspect-ratio: 16 / 9;
   border: none;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
 }
 
-@media (max-width: 414px) {
+.embedSlides {
+  aspect-ratio: 16 / 10;
+}
+
+@media (max-width: 414px), (max-width: 900px) {
   .bodySection {
     height: auto;
     margin-top: 1rem;
@@ -334,15 +377,20 @@
   }
 
   .aboutMe {
-    margin: 0;
+    max-height: 30vh;
+    margin: 0 0 3vh;
   }
 
   .aboutTitle {
-    font-size: 1.5rem;
+    font-size: 2vh;
   }
 
   .aboutText {
     font-size: 1rem;
+  }
+
+  .aboutImg {
+    width: 30vw;
   }
 
   .fa-link {
@@ -399,11 +447,32 @@ div.g1, div.g8, div.g10, div.g15 {
 }
 
 div.g1 {
-  background-image: url("https://images.unsplash.com/photo-1670441182961-0bf8a667821f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  background-image: url("https://images.unsplash.com/photo-1614623796638-f6da34cd277c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80");
+}
+
+div.g2 {
+  background-image: url("https://res.cloudinary.com/dtjiibzcn/image/upload/v1670857512/C33BC21E-5D33-475E-91EB-D121B10CDD10_hck8mg.jpg");
+}
+
+div.g3 {
+  background-image: url("https://images.unsplash.com/photo-1598110750624-207050c4f28c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
 }
 
 div.g5 {
-  background-image: url("https://res.cloudinary.com/dtjiibzcn/image/upload/v1670813513/cld-sample-5.jpg");
+  background-image: url("https://res.cloudinary.com/dtjiibzcn/image/upload/v1670857652/C9BEF909-C138-4542-AFFA-493E2FE0D308_rpfz1i.jpg");
+}
+
+div.g7 {
+  background-image: url("https://res.cloudinary.com/dtjiibzcn/image/upload/v1670857761/33771BB3-5315-40EA-B59B-F00F3405C5A8_p8udcy.jpg");
+}
+
+div.g9 {
+  background-image: url("https://res.cloudinary.com/dtjiibzcn/image/upload/v1670858029/F99ED259-977D-421D-889B-276AAC1C2BC6_dzmxkk.jpg");
+}
+
+div.g11 {
+  background-image: url("https://res.cloudinary.com/dtjiibzcn/image/upload/v1670857650/5B819C1E-AFA1-49E5-B2D5-540AE95D26BE_derwt9.jpg");
+  background-position: -1rem;
 }
 
 @media (max-width: 414px) {
@@ -485,7 +554,7 @@ div.g5 {
   background-color: #f000;
   border: none;
   margin: 0;
-  padding: 0;
+  padding: .5vh 0 0;
 }
 
 .cardIcon {
@@ -505,7 +574,7 @@ div.g5 {
 @media (max-width: 414px), (max-width: 900px) {
   .selectionOuter {
     height: auto;
-    z-index: -10;
+    z-index: 98;
     background-color: #11dbdb00;
     margin: 0;
     padding: 0;
@@ -514,9 +583,7 @@ div.g5 {
 
   .selectionWrapper {
     height: auto;
-    z-index: -10;
     border-top: 10px solid #ffffff28;
-    border-bottom: 10px solid #ffffff28;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -527,7 +594,7 @@ div.g5 {
   .selectionCard {
     width: 95vw;
     height: 6vh;
-    z-index: -10;
+    z-index: 99;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
@@ -542,12 +609,14 @@ div.g5 {
   .selectionCard > div {
     width: 30vw;
     height: auto;
+    z-index: 999;
   }
 
   .selectionCard > div > p {
     text-align: left;
     width: 30vw;
     height: auto;
+    z-index: 999;
     margin-left: 2vw;
     font-size: 1rem;
   }
@@ -555,6 +624,7 @@ div.g5 {
   .selectionCard > button {
     height: 6vh;
     color: #faebd700;
+    z-index: 999;
     background-color: #575658;
     border-top-left-radius: 1.3rem;
     border-bottom-left-radius: 1.3rem;

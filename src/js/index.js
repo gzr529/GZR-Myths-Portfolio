@@ -8,6 +8,7 @@ const splashImg = document.getElementById("splashImage")
 const imgOne = document.getElementById("aboutImageOne")
 const container = document.getElementById("bodySection")
 const bodySection = document.getElementById("bodyContainer")
+const windowControls = document.getElementById("windowControls")
 
 let currentValue = 0;
 
@@ -20,15 +21,15 @@ function resetValue() {
     currentValue = 0;
 }
 
-function infoBox(title, text, linkValue, linkBtn, currentValue, imageLink){
+function infoBox(title, text, linkValue, linkBtn, currentValue, imageLink, divLength){
     bodySection.insertAdjacentHTML("beforeend", `
-        <div class="aboutMe" id="bodySection${currentValue}">
+        <div class="${divLength}aboutMe" id="bodySection${currentValue}">
         <div class="aboutLeftCol">
-            <div class="aboutControls">
+            <div class="aboutControls" id="windowControls">
             <i class="fa-solid fa-window-minimize resizeButton minimizeButton" id="minList${currentValue}" title="Minimize"></i>
             <i class="fa-solid fa-expand resizeButton maximizeButton" id="maxList${currentValue}" title="Maximize"></i>
             </div>
-            <div class="aboutTitle" id="aboutTitle${currentValue}" href="${linkValue}"><p class="aboutTitleText">${title}</p><span><i class="fa-solid fa-link" id="linkBtn${currentValue}"></i></span></div>
+            <div class="aboutTitle" id="aboutTitle${currentValue}"><p class="aboutTitleText">${title}</p><a href="${linkValue}" class="linkBtn"><i class="fa-solid fa- fa-link id="linkBtn${currentValue}"></i></a></div>
             <img class="aboutImg" alt="Picture" id ="aboutImageOne${currentValue}" src="${imageLink}">
             <p class="aboutText" id="aboutText${currentValue}">${text}</p>
         </div>
@@ -37,32 +38,36 @@ function infoBox(title, text, linkValue, linkBtn, currentValue, imageLink){
     document.getElementById("minList"+(currentValue)).addEventListener("click", () => {
     document.getElementById("aboutImageOne"+(currentValue)).style.display = "flex";
     document.getElementById("bodySection"+(currentValue)).style.height = "auto";
+    document.getElementById("bodySection"+(currentValue)).style.maxHeight = "40vh";
     document.getElementById("aboutText"+(currentValue)).style.visibility = "rgba(250, 235, 215, 0)";
     document.getElementById("aboutText"+(currentValue)).style.display = "none";
     });
     document.getElementById("maxList"+(currentValue)).addEventListener("click", () => {
     document.getElementById("aboutImageOne"+(currentValue)).style.display = "none";
     document.getElementById("bodySection"+(currentValue)).style.height = "auto"; 
+    document.getElementById("bodySection"+(currentValue)).style.maxHeight = "25vh";
     document.getElementById("bodySection"+(currentValue)).style.color = "rgba(250, 235, 215, 1)";
     document.getElementById("aboutText"+(currentValue)).style.display = "flex";
     });
     if (linkBtn === false) {
     document.getElementById("linkBtn"+(currentValue)).style.opacity = "0";
+    console.log(`LINKED`)
     } else {
-    console.log(`Reject`)
+    console.log(`NO LINK`)
     }
     addValue();
 };
 
-//(TITLE, TEXT DESCRIPTION, LINK, , LINK BTN TOGGLE, VALUE FUNCTION VARIABLE)
+//(TITLE, TEXT DESCRIPTION, LINK, , LINK BTN TOGGLE, VALUE FUNCTION VARIABLE, BLANK FOR DEFAULT DIV 'full' TO EXPAND FULLY)
 
 infoBox(
     `About Me`, 
     `Hey! My name is Guseyn Zarbaliyev! I’m a Senior currently studying at Staten Island Technical High School. As you can see, I have a passion for Web Development and Computer Science. With college looming ever so closer, I hope to major in some field of engineering or computer science, whether it be Cybersecurity or Electrical Engineering. My favorite genres of music are Garage Rock and Rap, with my favorite artists being the Eagles of Death Metal and Kendrick Lamar. In my spare time, I like to work out and spend time with friends, doing literally anything. Wether it is thrifting in the city or just playing games, I enjoy any time I spend with them. I am also from the country of Azerbaijan and speak Azeri nearly perfectly (aside from my horrendous accent).`,
     `https://www.youtube.com/`,
-    true,
+    false,
     currentValue,
-    `https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai`)
+    `https://drive.google.com/uc?id=14YNDq7DkF4P-NZV1kz9oKWeNvaOgEVai`,
+    '')
 
 document.getElementById('essayButton').addEventListener('click', function essayButton(){
     bodySection.innerHTML = "";
@@ -74,7 +79,9 @@ document.getElementById('essayButton').addEventListener('click', function essayB
     `https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi`,
     true,
     currentValue,
-    `https://images.unsplash.com/photo-1599689018034-48e2ead82951?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1624&q=80`)
+    `https://images.unsplash.com/photo-1599689018034-48e2ead82951?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1624&q=80`,
+    '')
+    imgOne.remove();
     splashImg.style.backgroundImage=`url("https://i.imgur.com/eYPgI4m.png")`; 
     }, 1000);
     setTimeout(() => { 
@@ -86,13 +93,18 @@ document.getElementById('essayButton').addEventListener('click', function essayB
 });
 
 document.getElementById('projButton').addEventListener('click', function projButton(){
-    container.style.opacity = "0";
+    bodySection.innerHTML = "";
     projButton.disabled = true;
     setTimeout(() => { 
-    title.innerHTML = `<p class="aboutTitleText">Hey! Still A Work in Progress!</p>`;
-    body.innerHTML = `ლ(ಠ_ಠლ)`;
+    infoBox(
+    `WIP`, 
+    `Swearem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque accumsan nisl, a mattis eros vestibulum et. Vestibulum placerat purus ut nibh aliquam fringilla. Aenean et tortor diam, id tempor elit. Vivamus sagittis ornare fuck. Nullam lacinia jizzmopper vel diam tempor et consequat ligula porttitor.`,
+    `https://www.youtube.com/`,
+    true,
+    currentValue,
+    `https://media.tenor.com/ToI4KGJcIKEAAAAC/clean-cleaning.gif`,
+    '')
     imgOne.remove()
-    title.href="https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi"; 
     }, 1000);
     setTimeout(() => { 
         container.style.opacity = "1";
@@ -103,15 +115,23 @@ document.getElementById('projButton').addEventListener('click', function projBut
 });
 
 document.getElementById('presButton').addEventListener('click', function presButton(){
-    container.style.opacity = "0";
+    bodySection.innerHTML = "";
     presButton.disabled = true;
     setTimeout(() => { 
-    title.innerHTML = `<p class="aboutTitleText">Celtic Mythology Presentation</p>`;
-    body.innerHTML = `<div class="bodyVideoWrapper"><iframe class="bodyVideo" src="https://www.youtube.com/embed/RhtoTgRwoEA"></iframe><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vREk9uheugytWonYUcAKtyiXLOWZ5ZsVwu_-NIXBpqmWyw3WYB23qTDAyYgt-ICUDc4SNxPZI1e13W9/embed?start=false&loop=false&delayms=5000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
-</iframe></div>`;
-    imgOne.remove()
-    title.href="https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi";
-    splashImg.style.backgroundImage=`url("https://imgur.com/Y0VplhX.png")`; 
+        infoBox(
+        `Celtic Mythology Presentation`, 
+        `<div class="bodyVideoWrapper">
+        <iframe class="bodyVideo" src="https://www.youtube.com/embed/RhtoTgRwoEA"></iframe>
+        <iframe class="embedSlides" src="https://docs.google.com/presentation/d/e/2PACX-1vREk9uheugytWonYUcAKtyiXLOWZ5ZsVwu_-NIXBpqmWyw3WYB23qTDAyYgt-ICUDc4SNxPZI1e13W9/embed?start=false&loop=false&delayms=5000"></iframe>
+        </div>`,
+        `https://issuu.com/gzr529/docs/guseyn_zarbaliyev_-_fairy_tale_creative_writing_pi`,
+        true,
+        currentValue,
+        `https://res.cloudinary.com/dtjiibzcn/image/upload/v1670860334/1x1_vvdr6w.png`,
+        'full')  
+        imgOne.remove();
+        windowControls.style.display = "hidden";
+        windowControls.remove();
     }, 1000);
     setTimeout(() => { 
         container.style.opacity = "1";
@@ -120,20 +140,6 @@ document.getElementById('presButton').addEventListener('click', function presBut
         presButton.disabled = false;
     }, 6000); 
 });
-
-document.getElementById('blogButton').addEventListener('click', function blogButton(){
-    container.style.opacity = "0";
-    blogButton.disabled = true;
-    setTimeout(() => { 
-    }, 1000);
-    setTimeout(() => { 
-        container.style.opacity = "1";
-    }, 1200);
-    setTimeout(() => { 
-        blogButton.disabled = false;
-    }, 6000); 
-});
-
 
 document.getElementById('blogButton').addEventListener('click', function blogButton(){
     bodySection.innerHTML = "";
@@ -145,7 +151,8 @@ document.getElementById('blogButton').addEventListener('click', function blogBut
     `https://www.youtube.com/`,
     true,
     currentValue,
-    `https://images.unsplash.com/photo-1546375570-2ae6a397bbcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80`)
+    `https://images.unsplash.com/photo-1546375570-2ae6a397bbcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80`,
+    '')
     splashImg.style.backgroundImage=`url("https://i.imgur.com/eYPgI4m.png")`; 
     }, 1000);
     setTimeout(() => { 
@@ -154,5 +161,27 @@ document.getElementById('blogButton').addEventListener('click', function blogBut
     setTimeout(() => { 
     blogButton.disabled = false;
     }, 7000); 
+});
+
+document.getElementById('reflButton').addEventListener('click', function reflButton(){
+    bodySection.innerHTML = "";
+    reflButton.disabled = true;
+    setTimeout(() => { 
+    infoBox(
+    `WIP`, 
+    `Swearem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque accumsan nisl, a mattis eros vestibulum et. Vestibulum placerat purus ut nibh aliquam fringilla. Aenean et tortor diam, id tempor elit. Vivamus sagittis ornare fuck. Nullam lacinia jizzmopper vel diam tempor et consequat ligula porttitor.`,
+    `https://www.youtube.com/`,
+    true,
+    currentValue,
+    `https://media.tenor.com/ToI4KGJcIKEAAAAC/clean-cleaning.gif`,
+    '')
+    imgOne.remove()
+    }, 1000);
+    setTimeout(() => { 
+        container.style.opacity = "1";
+    }, 1200);
+    setTimeout(() => { 
+        reflButton.disabled = false;
+    }, 6000); 
 });
 

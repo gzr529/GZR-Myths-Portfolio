@@ -80,9 +80,10 @@
 }
 
 @media (max-width:414px),(max-width:900px){
+.signatureName{
+    font-size: 1.3rem;
+}
 .signatureContainer{
-    margin-top: -10vh;
-    padding-bottom: 5rem;
     transform: scale(0.75);
 }
 }
