@@ -1,12 +1,13 @@
 .bodySectionWrapper{
     position: relative;
+    min-height: 25vh;
     height: auto;
     width: 100vw;
     background-color:   rgb(27, 27, 27);
     margin: 0;
     padding: 0;
     z-index: 515;
-    transition: 1s all ease-in-out;
+    border-bottom: none;
 }
 
 .bodySection{
@@ -19,8 +20,9 @@
     padding-top: 2rem;
     margin: 0;
     align-items: center;
-    min-height: 30vh;
+    height: auto;
     transition: 0.75s all ease-in-out;
+    border-bottom: 1px solid rgba(255, 0, 0, 0);
 }
 
 .aboutMe, .fullaboutMe{
