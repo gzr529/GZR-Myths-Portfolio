@@ -16,11 +16,13 @@ body {
     font-family: 'Major Mono Display', monospace;
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
+    overflow-x: hidden; 
 }
 
 .html {
     margin: 0px;
     padding: 0rem;
+    overflow-x: hidden;
 }
 
 .off{

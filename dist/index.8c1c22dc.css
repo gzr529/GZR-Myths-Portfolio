@@ -5,7 +5,7 @@
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   width: 100vw;
-  z-index: 99;
+  z-index: 9999;
   height: 4rem;
   background-color: #000c;
   justify-content: flex-start;
@@ -713,11 +713,13 @@ body {
   margin: 0;
   font-family: Montserrat, sans-serif;
   font-size: 1rem;
+  overflow-x: hidden;
 }
 
 .html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .off {
