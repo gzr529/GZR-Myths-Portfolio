@@ -413,6 +413,23 @@ div.galleryTitle:before {
   font-style: italic;
 }
 
+.playlistWrapper {
+  width: 100%;
+  height: 35rem;
+  border-radius: 12px;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.playlistEmbed {
+  width: 33%;
+  min-width: 100px;
+  height: 33rem;
+  margin: 1rem;
+}
+
 .galleryWrapper {
   width: 100vw;
   height: auto;
@@ -532,7 +549,15 @@ div.g16 {
     overflow: hidden;
   }
 
-  section.galleryWrapper > *, section.galleryWrapper > * > * > * {
+  section.galleryWrapper > * {
+    width: 50vw;
+  }
+
+  section.galleryWrapper > * > * {
+    display: flex;
+  }
+
+  section.galleryWrapper > * > * > * {
     width: 50vw;
   }
 }

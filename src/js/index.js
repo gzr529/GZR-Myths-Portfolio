@@ -104,6 +104,17 @@ document.getElementById('blogButton').addEventListener('click', function blogBut
     currentValue,
     `https://images.unsplash.com/photo-1546375570-2ae6a397bbcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80`,
     '')
+
+    infoBox(
+    `Blog 2 : (Atomic Habits and Growth)`,
+    `As high school draws to a close, and the workload has lightened, I have come to realize many of my internal flaws due to the time I've had to self-introspect. From my chats with my therapist and those long nights left awake thinking, my flaws have risen above my strengths, utterly outweighing them. There are many aspects of myself I wish to improve, both physical and mental. From losing more weight to gaining a generally healthier mindset - I want to change, and my current largest weakness is my horrendous work ethic. It's blatant that I’m a terrible procrastinator. I stay awake until 3-4 am to get all my work done, then pass out once I get home, creating a terrible self-fulfilling cycle of degeneracy. I try and cope with it by powering through with tea and energy drinks, but the artificial sustenance is catching up to my body. But the key thing causing this insomniac cycle is my tendency to brush off work that isn't due the next day. Just a few days ago, I left a month of work to do in one day. I forced myself to go to one of my friend's houses, to prevent my procrastination. I wouldn't be able to fall asleep or procrastinate in any way at their house. It was the only course of action to get the giant pile of work completed. <br><br> I intend to keep up this habit of working alongside my friend, or at least outside of my house or room. In my room, there's so much to do besides work. Reorganizing and cleaning my shelves for the fifth time, playing video games, sleeping, or anything else but work. With the aid of my friend, we both work on our own projects, keeping each other in check, and making sure we are on track. Even just working at Starbucks - the setting just leaves me more motivated to get my work done and get home. <br><br> But this is only a temporary solution. A priority of mine is to finally completely crush this bad habit. It's simply a fact of mind over matter, and before I enter college and the course work only becomes more overbearing, I need to develop a healthier work ethic to prevent burnout and unnecessary stress - and to also produce the best work I possibly can for myself. I need to overcome this before it starts to affect all facets of my life. Currently, I’ve been able to maintain my social life, but it’s more often that I find myself declining invitations to hang out with my closest friends, simply because I am too tired - or have too much work to do since I left everything for the weekend.<br><br> There also comes the problem of sectioning or chunking my work. I often do work in large blocks and leave studying to the last moment. While I do fine on most of my exams, most of what I studied slips away once I hand in that paper. There were points when I would forget the entire Units that I studied. Ironically, it was studying late at night for my Psychology exam that I learned why this is, the premise known as retroactive interference, when old information that has already been encoded is disrupted and forgotten due to the addition of new information.<br><br> I’ve always loved learning, from history to computer science. All of these experiences have led me to the realization that I want to become a better learner overall. I want to understand and truly comprehend the material that I am studying, and not just memorize it for the sake of passing exams. In order to achieve this goal, I know that I need to develop a healthier work ethic and a better study routine. I also intend to continue working alongside my friend and working in different environments to keep myself motivated and productive.`,
+    `https://issuu.com/gzr529/docs/myths_-_blog_2`,
+    true,
+    currentValue,
+    `https://images.unsplash.com/photo-1591360236494-e6557e5ffa25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80`,
+    '')
+
+
     }, 1000);
     setTimeout(() => { 
         bodySection.style.opacity = "1";
@@ -124,7 +135,7 @@ document.getElementById('essayButton').addEventListener('click', function essayB
     infoBox(
     `Book of the Dead (NatGeo Viewing Reflection)`, 
     `The Ancient Egyptians had a unique perspective on death, viewing it not as the end of life, but as an extension of it. For the Egyptians, death was seen as a natural part of the journey of life, and the journey to the afterlife was considered to be just as important as the journey of life itself. In fact, the Ancient Egyptians believed that the end of one life was the beginning of another, and so death and life were closely intertwined.<br><br> However, the journey to the afterlife was not always an easy one. According to the Ancient Egyptians, there were countless trials and tribulations that one had to face in order to reach the next life. To help guide them on this journey, the Egyptians buried the Book of the Dead with an individual, which acted as a kind of "protection" and guide. Even if one was able to make the journey to the next life, they would still have to face the Hall of Judgement, where they would be judged for their sins and actions in their previous life. The belief in judgment after death was not unique to the Ancient Egyptians and is also found in many other cultures and religions, such as Christianity.<br><br> Personally, my views on death align with those of the Ancient Egyptians in some ways. Though I was raised with Muslim morals, I do not subscribe to the ideologies of the religion and do not believe in an afterlife. As an atheist, I find the final totality of death to be comforting in a strange way, as it means that this life is all we have and therefore makes it worth living. I am not motivated to be a good person simply for the sake of a better afterlife, but rather I strive to be a good person simply because it is the right thing to do. This concept of death giving purpose to life is one that I find to be meaningful, as it helps me to appreciate the time that I have and to make the most of it, since it is the only life I will ever have. Why live life in accordance with something that might not even exist? It is a reminder to live in the present and to strive to be a better person, not just for the sake of a hypothetical afterlife, but for the sake of living a fulfilling and meaningful life in the here and now.`,
-    `https://docs.google.com/document/d/1_P84ufDv3w5-2idm3MNhktOr9H-Aov_7B_9UYigmGMk/edit?usp=sharing`,
+    `https://issuu.com/gzr529/docs/myths_-_book_of_the_dead_reflection`,
     true,
     currentValue,
     `https://images.unsplash.com/photo-1584719866406-c76ddee48493?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80`,
@@ -155,14 +166,16 @@ document.getElementById('projButton').addEventListener('click', function projBut
     }, 999);
     projButton.disabled = true;
     setTimeout(() => { 
-    infoBox(
-    `WIP`, 
-    `Swearem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque accumsan nisl, a mattis eros vestibulum et. Vestibulum placerat purus ut nibh aliquam fringilla. Aenean et tortor diam, id tempor elit. Vivamus sagittis ornare fuck. Nullam lacinia jizzmopper vel diam tempor et consequat ligula porttitor.`,
-    `https://www.youtube.com/`,
-    false,
-    currentValue,
-    `https://media.tenor.com/ToI4KGJcIKEAAAAC/clean-cleaning.gif`,
-    '')
+        presBox(
+        `Norse (Gerd and Frey) Presentation`, 
+        `<div class="bodyVideoWrapper">
+        <iframe class="bodyVideo" src="https://www.youtube.com/embed/u_OlXW4wIGg"></iframe>
+        </div>`,
+        `https://www.youtube.com/watch?v=u_OlXW4wIGg`,
+        true,
+        currentValue,
+        `https://res.cloudinary.com/dtjiibzcn/image/upload/v1670860334/1x1_vvdr6w.png`,
+        'full')
     imgOne.remove()
     }, 1000);
     setTimeout(() => { 
