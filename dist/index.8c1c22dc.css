@@ -80,6 +80,7 @@
   background-size: cover;
   margin: 0;
   padding: 0;
+  transition: all 3s cubic-bezier(.075, .82, .165, 1);
   display: flex;
   position: absolute;
 }
@@ -753,6 +754,10 @@ body {
 
 .on {
   display: flex;
+}
+
+.highlight {
+  background-image: url("https://res.cloudinary.com/dtjiibzcn/image/upload/v1678777682/Portfolio%20Website%20%28Master%29/screenshot.2253_gr2qbp.png");
 }
 
 body[data-aos-duration="50"] [data-aos], [data-aos][data-aos][data-aos-duration="50"] {
